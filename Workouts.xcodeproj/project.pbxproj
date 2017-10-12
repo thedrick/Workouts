@@ -7,13 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2502B38C1F8C74670089DDF8 /* LegPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B38B1F8C74670089DDF8 /* LegPress.swift */; };
+		2502B38E1F8C75190089DDF8 /* LegExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B38D1F8C75190089DDF8 /* LegExtensions.swift */; };
+		2502B3901F8C754E0089DDF8 /* SeatedLegCurl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B38F1F8C754E0089DDF8 /* SeatedLegCurl.swift */; };
+		2502B3921F8C75690089DDF8 /* LyingLegCurls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B3911F8C75690089DDF8 /* LyingLegCurls.swift */; };
+		2502B3941F8C75880089DDF8 /* StandingCalfRaises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B3931F8C75880089DDF8 /* StandingCalfRaises.swift */; };
+		2502B3961F8C75A50089DDF8 /* SeatedCalfRaise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B3951F8C75A50089DDF8 /* SeatedCalfRaise.swift */; };
+		2502B3981F8C75C30089DDF8 /* AbCrunchMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B3971F8C75C30089DDF8 /* AbCrunchMachine.swift */; };
+		2502B39A1F8C75D80089DDF8 /* Crunches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B3991F8C75D80089DDF8 /* Crunches.swift */; };
 		253DA33E1F89A4E70089D0EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA33D1F89A4E70089D0EC /* AppDelegate.swift */; };
-		253DA3401F89A4E70089D0EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA33F1F89A4E70089D0EC /* ViewController.swift */; };
-		253DA3431F89A4E70089D0EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253DA3411F89A4E70089D0EC /* Main.storyboard */; };
+		253DA3401F89A4E70089D0EC /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA33F1F89A4E70089D0EC /* WorkoutViewController.swift */; };
 		253DA3451F89A4E70089D0EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253DA3441F89A4E70089D0EC /* Assets.xcassets */; };
 		253DA3481F89A4E70089D0EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253DA3461F89A4E70089D0EC /* LaunchScreen.storyboard */; };
 		253DA3531F89A4E70089D0EC /* WorkoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3521F89A4E70089D0EC /* WorkoutsTests.swift */; };
 		253DA35E1F89A4E70089D0EC /* WorkoutsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA35D1F89A4E70089D0EC /* WorkoutsUITests.swift */; };
+		253DA36E1F89A6190089D0EC /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA36D1F89A6190089D0EC /* Workout.swift */; };
+		253DA3701F89A84C0089D0EC /* DumbellBenchPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA36F1F89A84C0089D0EC /* DumbellBenchPress.swift */; };
+		253DA3721F89A9C30089D0EC /* WorkoutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3711F89A9C30089D0EC /* WorkoutBuilder.swift */; };
+		253DA3771F89ABEA0089D0EC /* ExerciseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3761F89ABEA0089D0EC /* ExerciseSection.swift */; };
+		253DA37A1F89B1290089D0EC /* Butterfly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3791F89B1290089D0EC /* Butterfly.swift */; };
+		253DA37C1F89B1AC0089D0EC /* StandingMilitaryPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA37B1F89B1AC0089D0EC /* StandingMilitaryPress.swift */; };
+		253DA37E1F89B1DA0089D0EC /* TricepsPushdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA37D1F89B1DA0089D0EC /* TricepsPushdown.swift */; };
+		253DA3801F89B1FA0089D0EC /* LyingTricpesPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA37F1F89B1FA0089D0EC /* LyingTricpesPress.swift */; };
+		253DA3821F89B2270089D0EC /* SideLateralRaise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3811F89B2270089D0EC /* SideLateralRaise.swift */; };
+		253DA3841F89B24E0089D0EC /* PreacherCurl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3831F89B24E0089D0EC /* PreacherCurl.swift */; };
+		253DA3861F89B2620089D0EC /* SeatedDumbellCurl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3851F89B2620089D0EC /* SeatedDumbellCurl.swift */; };
+		253DA3881F89B28B0089D0EC /* WideGripLatPulldown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3871F89B28B0089D0EC /* WideGripLatPulldown.swift */; };
+		253DA38A1F89B2B20089D0EC /* OneArmDumbellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3891F89B2B20089D0EC /* OneArmDumbellRow.swift */; };
+		253DA38C1F89B2D40089D0EC /* DumbellShrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA38B1F89B2D40089D0EC /* DumbellShrug.swift */; };
+		253DA38F1F89B3950089D0EC /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA38E1F89B3950089D0EC /* WorkoutListViewController.swift */; };
+		253DA3911F89BB390089D0EC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3901F89BB390089D0EC /* SettingsViewController.swift */; };
+		253DA3941F89BCA00089D0EC /* WeightSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3931F89BCA00089D0EC /* WeightSettingCell.swift */; };
+		2591E2121F89C07500217DFE /* WeightStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2111F89C07500217DFE /* WeightStore.swift */; };
+		2591E2141F89C45300217DFE /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2131F89C45300217DFE /* ExerciseRow.swift */; };
+		2591E2171F89C5F900217DFE /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2161F89C5F900217DFE /* UIView+Constraints.swift */; };
+		2591E2191F8A8F6A00217DFE /* WorkoutSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2181F8A8F6A00217DFE /* WorkoutSectionHeader.swift */; };
+		2591E21C1F8AD52F00217DFE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E21B1F8AD52F00217DFE /* Colors.swift */; };
+		2591E22B1F8AD74C00217DFE /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2271F8AD68E00217DFE /* FontAwesome.swift */; };
+		2591E22C1F8AD74F00217DFE /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2211F8AD68D00217DFE /* Enum.swift */; };
+		2591E22D1F8AD75200217DFE /* FontAwesomeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2231F8AD68D00217DFE /* FontAwesomeBarButtonItem.swift */; };
+		2591E22E1F8AD75200217DFE /* FontAwesomeImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2291F8AD68E00217DFE /* FontAwesomeImageRepresentable.swift */; };
+		2591E22F1F8AD75200217DFE /* FontAwesomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2221F8AD68D00217DFE /* FontAwesomeImageView.swift */; };
+		2591E2301F8AD75200217DFE /* FontAwesomeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E22A1F8AD68E00217DFE /* FontAwesomeSegmentedControl.swift */; };
+		2591E2311F8AD75200217DFE /* FontAwesomeStateRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2281F8AD68E00217DFE /* FontAwesomeStateRequirement.swift */; };
+		2591E2321F8AD75200217DFE /* FontAwesomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2241F8AD68D00217DFE /* FontAwesomeTabBarItem.swift */; };
+		2591E2331F8AD75200217DFE /* FontAwesomeTextRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2251F8AD68D00217DFE /* FontAwesomeTextRepresentable.swift */; };
+		2591E2341F8AD75200217DFE /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2261F8AD68D00217DFE /* FontAwesomeView.swift */; };
+		2591E2351F8AD7CB00217DFE /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2591E21F1F8AD67400217DFE /* FontAwesome.otf */; };
+		2591E2371F8ADB0800217DFE /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2361F8ADB0800217DFE /* ExerciseDetailViewController.swift */; };
+		25DE0CC41F8F0BFA00046178 /* ChinUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CC31F8F0BFA00046178 /* ChinUp.swift */; };
+		25DE0CC61F8F0C1D00046178 /* SeatedCableRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CC51F8F0C1D00046178 /* SeatedCableRows.swift */; };
+		25DE0CC81F8F0D7F00046178 /* UprightCableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CC71F8F0D7F00046178 /* UprightCableRow.swift */; };
+		25DE0CCA1F8F0DDE00046178 /* EZBarCurl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CC91F8F0DDE00046178 /* EZBarCurl.swift */; };
+		25DE0CCC1F8F0DF900046178 /* HammerCurl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CCB1F8F0DF900046178 /* HammerCurl.swift */; };
+		25DE0CCE1F8F0E0E00046178 /* InclineDumbellPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CCD1F8F0E0E00046178 /* InclineDumbellPress.swift */; };
+		25DE0CD01F8F0E2C00046178 /* CableCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CCF1F8F0E2C00046178 /* CableCrossover.swift */; };
+		25DE0CD21F8F0E4C00046178 /* DipsChest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CD11F8F0E4C00046178 /* DipsChest.swift */; };
+		B06C9A9D1A33FB79BBDE9ACD /* Pods_WorkoutsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BD22213631573D7B7C7BD4 /* Pods_WorkoutsUITests.framework */; };
+		C8AACD49EADCF99426862F63 /* Pods_Workouts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258666CF8FFFFA1598B901C8 /* Pods_Workouts.framework */; };
+		D432773E4EBD6116F9914CEC /* Pods_WorkoutsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D1475256560E60D43735C9 /* Pods_WorkoutsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +86,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2502B38B1F8C74670089DDF8 /* LegPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegPress.swift; sourceTree = "<group>"; };
+		2502B38D1F8C75190089DDF8 /* LegExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegExtensions.swift; sourceTree = "<group>"; };
+		2502B38F1F8C754E0089DDF8 /* SeatedLegCurl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatedLegCurl.swift; sourceTree = "<group>"; };
+		2502B3911F8C75690089DDF8 /* LyingLegCurls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyingLegCurls.swift; sourceTree = "<group>"; };
+		2502B3931F8C75880089DDF8 /* StandingCalfRaises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCalfRaises.swift; sourceTree = "<group>"; };
+		2502B3951F8C75A50089DDF8 /* SeatedCalfRaise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatedCalfRaise.swift; sourceTree = "<group>"; };
+		2502B3971F8C75C30089DDF8 /* AbCrunchMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbCrunchMachine.swift; sourceTree = "<group>"; };
+		2502B3991F8C75D80089DDF8 /* Crunches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crunches.swift; sourceTree = "<group>"; };
 		253DA33A1F89A4E60089D0EC /* Workouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253DA33D1F89A4E70089D0EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		253DA33F1F89A4E70089D0EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		253DA3421F89A4E70089D0EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		253DA33F1F89A4E70089D0EC /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		253DA3441F89A4E70089D0EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		253DA3471F89A4E70089D0EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		253DA3491F89A4E70089D0EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +106,57 @@
 		253DA3591F89A4E70089D0EC /* WorkoutsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		253DA35D1F89A4E70089D0EC /* WorkoutsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsUITests.swift; sourceTree = "<group>"; };
 		253DA35F1F89A4E70089D0EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		253DA36D1F89A6190089D0EC /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		253DA36F1F89A84C0089D0EC /* DumbellBenchPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumbellBenchPress.swift; sourceTree = "<group>"; };
+		253DA3711F89A9C30089D0EC /* WorkoutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutBuilder.swift; sourceTree = "<group>"; };
+		253DA3761F89ABEA0089D0EC /* ExerciseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSection.swift; sourceTree = "<group>"; };
+		253DA3791F89B1290089D0EC /* Butterfly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Butterfly.swift; sourceTree = "<group>"; };
+		253DA37B1F89B1AC0089D0EC /* StandingMilitaryPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingMilitaryPress.swift; sourceTree = "<group>"; };
+		253DA37D1F89B1DA0089D0EC /* TricepsPushdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricepsPushdown.swift; sourceTree = "<group>"; };
+		253DA37F1F89B1FA0089D0EC /* LyingTricpesPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyingTricpesPress.swift; sourceTree = "<group>"; };
+		253DA3811F89B2270089D0EC /* SideLateralRaise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideLateralRaise.swift; sourceTree = "<group>"; };
+		253DA3831F89B24E0089D0EC /* PreacherCurl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreacherCurl.swift; sourceTree = "<group>"; };
+		253DA3851F89B2620089D0EC /* SeatedDumbellCurl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatedDumbellCurl.swift; sourceTree = "<group>"; };
+		253DA3871F89B28B0089D0EC /* WideGripLatPulldown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideGripLatPulldown.swift; sourceTree = "<group>"; };
+		253DA3891F89B2B20089D0EC /* OneArmDumbellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneArmDumbellRow.swift; sourceTree = "<group>"; };
+		253DA38B1F89B2D40089D0EC /* DumbellShrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumbellShrug.swift; sourceTree = "<group>"; };
+		253DA38E1F89B3950089D0EC /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
+		253DA3901F89BB390089D0EC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		253DA3931F89BCA00089D0EC /* WeightSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightSettingCell.swift; sourceTree = "<group>"; };
+		258666CF8FFFFA1598B901C8 /* Pods_Workouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workouts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2591E2111F89C07500217DFE /* WeightStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightStore.swift; sourceTree = "<group>"; };
+		2591E2131F89C45300217DFE /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
+		2591E2161F89C5F900217DFE /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		2591E2181F8A8F6A00217DFE /* WorkoutSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSectionHeader.swift; sourceTree = "<group>"; };
+		2591E21B1F8AD52F00217DFE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2591E21F1F8AD67400217DFE /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		2591E2211F8AD68D00217DFE /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		2591E2221F8AD68D00217DFE /* FontAwesomeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageView.swift; sourceTree = "<group>"; };
+		2591E2231F8AD68D00217DFE /* FontAwesomeBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeBarButtonItem.swift; sourceTree = "<group>"; };
+		2591E2241F8AD68D00217DFE /* FontAwesomeTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeTabBarItem.swift; sourceTree = "<group>"; };
+		2591E2251F8AD68D00217DFE /* FontAwesomeTextRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeTextRepresentable.swift; sourceTree = "<group>"; };
+		2591E2261F8AD68D00217DFE /* FontAwesomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeView.swift; sourceTree = "<group>"; };
+		2591E2271F8AD68E00217DFE /* FontAwesome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
+		2591E2281F8AD68E00217DFE /* FontAwesomeStateRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeStateRequirement.swift; sourceTree = "<group>"; };
+		2591E2291F8AD68E00217DFE /* FontAwesomeImageRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageRepresentable.swift; sourceTree = "<group>"; };
+		2591E22A1F8AD68E00217DFE /* FontAwesomeSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeSegmentedControl.swift; sourceTree = "<group>"; };
+		2591E2361F8ADB0800217DFE /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
+		25DE0CC31F8F0BFA00046178 /* ChinUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinUp.swift; sourceTree = "<group>"; };
+		25DE0CC51F8F0C1D00046178 /* SeatedCableRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatedCableRows.swift; sourceTree = "<group>"; };
+		25DE0CC71F8F0D7F00046178 /* UprightCableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UprightCableRow.swift; sourceTree = "<group>"; };
+		25DE0CC91F8F0DDE00046178 /* EZBarCurl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZBarCurl.swift; sourceTree = "<group>"; };
+		25DE0CCB1F8F0DF900046178 /* HammerCurl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HammerCurl.swift; sourceTree = "<group>"; };
+		25DE0CCD1F8F0E0E00046178 /* InclineDumbellPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InclineDumbellPress.swift; sourceTree = "<group>"; };
+		25DE0CCF1F8F0E2C00046178 /* CableCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CableCrossover.swift; sourceTree = "<group>"; };
+		25DE0CD11F8F0E4C00046178 /* DipsChest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DipsChest.swift; sourceTree = "<group>"; };
+		3479E55CBB4275E15EE55237 /* Pods-Workouts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workouts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workouts/Pods-Workouts.release.xcconfig"; sourceTree = "<group>"; };
+		45D1475256560E60D43735C9 /* Pods_WorkoutsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkoutsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E8F41AA53D70E03B9DD3F6A /* Pods-WorkoutsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutsUITests/Pods-WorkoutsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		78BD22213631573D7B7C7BD4 /* Pods_WorkoutsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkoutsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E6BF4804D3C3C733CF5E7F6 /* Pods-Workouts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workouts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workouts/Pods-Workouts.debug.xcconfig"; sourceTree = "<group>"; };
+		B26613A1FAA853214055C601 /* Pods-WorkoutsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutsTests/Pods-WorkoutsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0305382AC342ECCE1783ABA /* Pods-WorkoutsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutsTests/Pods-WorkoutsTests.release.xcconfig"; sourceTree = "<group>"; };
+		F57E315E960DAF9DA8D585A2 /* Pods-WorkoutsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutsUITests/Pods-WorkoutsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8AACD49EADCF99426862F63 /* Pods_Workouts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D432773E4EBD6116F9914CEC /* Pods_WorkoutsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,19 +180,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06C9A9D1A33FB79BBDE9ACD /* Pods_WorkoutsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3045D34C9353DFBF440051 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E6BF4804D3C3C733CF5E7F6 /* Pods-Workouts.debug.xcconfig */,
+				3479E55CBB4275E15EE55237 /* Pods-Workouts.release.xcconfig */,
+				B26613A1FAA853214055C601 /* Pods-WorkoutsTests.debug.xcconfig */,
+				E0305382AC342ECCE1783ABA /* Pods-WorkoutsTests.release.xcconfig */,
+				4E8F41AA53D70E03B9DD3F6A /* Pods-WorkoutsUITests.debug.xcconfig */,
+				F57E315E960DAF9DA8D585A2 /* Pods-WorkoutsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2502B3891F8C735D0089DDF8 /* Monday */ = {
+			isa = PBXGroup;
+			children = (
+				253DA36F1F89A84C0089D0EC /* DumbellBenchPress.swift */,
+				253DA3791F89B1290089D0EC /* Butterfly.swift */,
+				253DA37B1F89B1AC0089D0EC /* StandingMilitaryPress.swift */,
+				253DA37D1F89B1DA0089D0EC /* TricepsPushdown.swift */,
+				253DA37F1F89B1FA0089D0EC /* LyingTricpesPress.swift */,
+				253DA3811F89B2270089D0EC /* SideLateralRaise.swift */,
+				253DA3831F89B24E0089D0EC /* PreacherCurl.swift */,
+				253DA3851F89B2620089D0EC /* SeatedDumbellCurl.swift */,
+				253DA3871F89B28B0089D0EC /* WideGripLatPulldown.swift */,
+				253DA3891F89B2B20089D0EC /* OneArmDumbellRow.swift */,
+				253DA38B1F89B2D40089D0EC /* DumbellShrug.swift */,
+			);
+			path = Monday;
+			sourceTree = "<group>";
+		};
+		2502B38A1F8C73650089DDF8 /* Tuesday */ = {
+			isa = PBXGroup;
+			children = (
+				2502B38B1F8C74670089DDF8 /* LegPress.swift */,
+				2502B38D1F8C75190089DDF8 /* LegExtensions.swift */,
+				2502B38F1F8C754E0089DDF8 /* SeatedLegCurl.swift */,
+				2502B3911F8C75690089DDF8 /* LyingLegCurls.swift */,
+				2502B3931F8C75880089DDF8 /* StandingCalfRaises.swift */,
+				2502B3951F8C75A50089DDF8 /* SeatedCalfRaise.swift */,
+				2502B3971F8C75C30089DDF8 /* AbCrunchMachine.swift */,
+				2502B3991F8C75D80089DDF8 /* Crunches.swift */,
+			);
+			path = Tuesday;
+			sourceTree = "<group>";
+		};
 		253DA3311F89A4E60089D0EC = {
 			isa = PBXGroup;
 			children = (
+				2591E2201F8AD67C00217DFE /* FontAwesome */,
 				253DA33C1F89A4E60089D0EC /* Workouts */,
 				253DA3511F89A4E70089D0EC /* WorkoutsTests */,
 				253DA35C1F89A4E70089D0EC /* WorkoutsUITests */,
 				253DA33B1F89A4E60089D0EC /* Products */,
+				0E3045D34C9353DFBF440051 /* Pods */,
+				E750AC099BD6F0A41456F106 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +259,15 @@
 		253DA33C1F89A4E60089D0EC /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
-				253DA33D1F89A4E70089D0EC /* AppDelegate.swift */,
-				253DA33F1F89A4E70089D0EC /* ViewController.swift */,
-				253DA3411F89A4E70089D0EC /* Main.storyboard */,
+				2591E21E1F8AD66500217DFE /* Application */,
+				2591E21D1F8AD65700217DFE /* Resources */,
+				2591E21A1F8AD52500217DFE /* Global */,
+				2591E2151F89C5EC00217DFE /* Extensions */,
+				253DA3921F89BC8D0089D0EC /* Cells */,
+				253DA3781F89B0DD0089D0EC /* Exercises */,
+				253DA3731F89AB610089D0EC /* CellPresenters */,
+				253DA36C1F89A60A0089D0EC /* Models */,
+				253DA38D1F89B36F0089D0EC /* ViewControllers */,
 				253DA3441F89A4E70089D0EC /* Assets.xcassets */,
 				253DA3461F89A4E70089D0EC /* LaunchScreen.storyboard */,
 				253DA3491F89A4E70089D0EC /* Info.plist */,
@@ -125,6 +293,129 @@
 			path = WorkoutsUITests;
 			sourceTree = "<group>";
 		};
+		253DA36C1F89A60A0089D0EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				253DA36D1F89A6190089D0EC /* Workout.swift */,
+				253DA3711F89A9C30089D0EC /* WorkoutBuilder.swift */,
+				2591E2111F89C07500217DFE /* WeightStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		253DA3731F89AB610089D0EC /* CellPresenters */ = {
+			isa = PBXGroup;
+			children = (
+				253DA3761F89ABEA0089D0EC /* ExerciseSection.swift */,
+			);
+			path = CellPresenters;
+			sourceTree = "<group>";
+		};
+		253DA3781F89B0DD0089D0EC /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				2502B3891F8C735D0089DDF8 /* Monday */,
+				2502B38A1F8C73650089DDF8 /* Tuesday */,
+				25DE0CC21F8F0B5A00046178 /* Thursday */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		253DA38D1F89B36F0089D0EC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				253DA33F1F89A4E70089D0EC /* WorkoutViewController.swift */,
+				253DA38E1F89B3950089D0EC /* WorkoutListViewController.swift */,
+				253DA3901F89BB390089D0EC /* SettingsViewController.swift */,
+				2591E2361F8ADB0800217DFE /* ExerciseDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		253DA3921F89BC8D0089D0EC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				253DA3931F89BCA00089D0EC /* WeightSettingCell.swift */,
+				2591E2131F89C45300217DFE /* ExerciseRow.swift */,
+				2591E2181F8A8F6A00217DFE /* WorkoutSectionHeader.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2591E2151F89C5EC00217DFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2591E2161F89C5F900217DFE /* UIView+Constraints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2591E21A1F8AD52500217DFE /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				2591E21B1F8AD52F00217DFE /* Colors.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		2591E21D1F8AD65700217DFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2591E21F1F8AD67400217DFE /* FontAwesome.otf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2591E21E1F8AD66500217DFE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				253DA33D1F89A4E70089D0EC /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2591E2201F8AD67C00217DFE /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				2591E2211F8AD68D00217DFE /* Enum.swift */,
+				2591E2271F8AD68E00217DFE /* FontAwesome.swift */,
+				2591E2231F8AD68D00217DFE /* FontAwesomeBarButtonItem.swift */,
+				2591E2291F8AD68E00217DFE /* FontAwesomeImageRepresentable.swift */,
+				2591E2221F8AD68D00217DFE /* FontAwesomeImageView.swift */,
+				2591E22A1F8AD68E00217DFE /* FontAwesomeSegmentedControl.swift */,
+				2591E2281F8AD68E00217DFE /* FontAwesomeStateRequirement.swift */,
+				2591E2241F8AD68D00217DFE /* FontAwesomeTabBarItem.swift */,
+				2591E2251F8AD68D00217DFE /* FontAwesomeTextRepresentable.swift */,
+				2591E2261F8AD68D00217DFE /* FontAwesomeView.swift */,
+			);
+			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		25DE0CC21F8F0B5A00046178 /* Thursday */ = {
+			isa = PBXGroup;
+			children = (
+				25DE0CC31F8F0BFA00046178 /* ChinUp.swift */,
+				25DE0CC51F8F0C1D00046178 /* SeatedCableRows.swift */,
+				25DE0CC71F8F0D7F00046178 /* UprightCableRow.swift */,
+				25DE0CC91F8F0DDE00046178 /* EZBarCurl.swift */,
+				25DE0CCB1F8F0DF900046178 /* HammerCurl.swift */,
+				25DE0CCD1F8F0E0E00046178 /* InclineDumbellPress.swift */,
+				25DE0CCF1F8F0E2C00046178 /* CableCrossover.swift */,
+				25DE0CD11F8F0E4C00046178 /* DipsChest.swift */,
+			);
+			path = Thursday;
+			sourceTree = "<group>";
+		};
+		E750AC099BD6F0A41456F106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				258666CF8FFFFA1598B901C8 /* Pods_Workouts.framework */,
+				45D1475256560E60D43735C9 /* Pods_WorkoutsTests.framework */,
+				78BD22213631573D7B7C7BD4 /* Pods_WorkoutsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +423,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 253DA3621F89A4E70089D0EC /* Build configuration list for PBXNativeTarget "Workouts" */;
 			buildPhases = (
+				3F9F176CA0751FF98BFFF3BB /* [CP] Check Pods Manifest.lock */,
 				253DA3361F89A4E60089D0EC /* Sources */,
 				253DA3371F89A4E60089D0EC /* Frameworks */,
 				253DA3381F89A4E60089D0EC /* Resources */,
+				6616CE06B5A28FD93EB4ABB9 /* [CP] Embed Pods Frameworks */,
+				9E8A729D86D8A1A91682FDE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +443,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 253DA3651F89A4E70089D0EC /* Build configuration list for PBXNativeTarget "WorkoutsTests" */;
 			buildPhases = (
+				F6B7A4EACD01EE240C13C691 /* [CP] Check Pods Manifest.lock */,
 				253DA34A1F89A4E70089D0EC /* Sources */,
 				253DA34B1F89A4E70089D0EC /* Frameworks */,
 				253DA34C1F89A4E70089D0EC /* Resources */,
+				7559A618041E1AF13EB9D129 /* [CP] Embed Pods Frameworks */,
+				9796C1382AF740338644B8E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +464,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 253DA3681F89A4E70089D0EC /* Build configuration list for PBXNativeTarget "WorkoutsUITests" */;
 			buildPhases = (
+				D6151A711AAD9D68F5D90CFD /* [CP] Check Pods Manifest.lock */,
 				253DA3551F89A4E70089D0EC /* Sources */,
 				253DA3561F89A4E70089D0EC /* Frameworks */,
 				253DA3571F89A4E70089D0EC /* Resources */,
+				7D5E9A8257A78DA0D05237EC /* [CP] Embed Pods Frameworks */,
+				65AC73374FDF60FFE0411407 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,7 +534,7 @@
 			files = (
 				253DA3481F89A4E70089D0EC /* LaunchScreen.storyboard in Resources */,
 				253DA3451F89A4E70089D0EC /* Assets.xcassets in Resources */,
-				253DA3431F89A4E70089D0EC /* Main.storyboard in Resources */,
+				2591E2351F8AD7CB00217DFE /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +554,212 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F9F176CA0751FF98BFFF3BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Workouts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65AC73374FDF60FFE0411407 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkoutsUITests/Pods-WorkoutsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6616CE06B5A28FD93EB4ABB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Workouts/Pods-Workouts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workouts/Pods-Workouts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7559A618041E1AF13EB9D129 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkoutsTests/Pods-WorkoutsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D5E9A8257A78DA0D05237EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkoutsUITests/Pods-WorkoutsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9796C1382AF740338644B8E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkoutsTests/Pods-WorkoutsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E8A729D86D8A1A91682FDE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workouts/Pods-Workouts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6151A711AAD9D68F5D90CFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorkoutsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B7A4EACD01EE240C13C691 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorkoutsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		253DA3361F89A4E60089D0EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253DA3401F89A4E70089D0EC /* ViewController.swift in Sources */,
+				2502B3961F8C75A50089DDF8 /* SeatedCalfRaise.swift in Sources */,
+				2591E22B1F8AD74C00217DFE /* FontAwesome.swift in Sources */,
+				2591E2191F8A8F6A00217DFE /* WorkoutSectionHeader.swift in Sources */,
+				25DE0CC61F8F0C1D00046178 /* SeatedCableRows.swift in Sources */,
+				2591E21C1F8AD52F00217DFE /* Colors.swift in Sources */,
+				253DA3801F89B1FA0089D0EC /* LyingTricpesPress.swift in Sources */,
+				25DE0CCA1F8F0DDE00046178 /* EZBarCurl.swift in Sources */,
+				2591E2141F89C45300217DFE /* ExerciseRow.swift in Sources */,
+				253DA3881F89B28B0089D0EC /* WideGripLatPulldown.swift in Sources */,
+				253DA3401F89A4E70089D0EC /* WorkoutViewController.swift in Sources */,
+				2591E22D1F8AD75200217DFE /* FontAwesomeBarButtonItem.swift in Sources */,
+				253DA38F1F89B3950089D0EC /* WorkoutListViewController.swift in Sources */,
+				253DA3861F89B2620089D0EC /* SeatedDumbellCurl.swift in Sources */,
+				2591E2331F8AD75200217DFE /* FontAwesomeTextRepresentable.swift in Sources */,
+				2591E2341F8AD75200217DFE /* FontAwesomeView.swift in Sources */,
+				253DA37E1F89B1DA0089D0EC /* TricepsPushdown.swift in Sources */,
+				2591E2301F8AD75200217DFE /* FontAwesomeSegmentedControl.swift in Sources */,
+				253DA3941F89BCA00089D0EC /* WeightSettingCell.swift in Sources */,
+				25DE0CCE1F8F0E0E00046178 /* InclineDumbellPress.swift in Sources */,
+				2591E2371F8ADB0800217DFE /* ExerciseDetailViewController.swift in Sources */,
+				25DE0CC81F8F0D7F00046178 /* UprightCableRow.swift in Sources */,
+				253DA3771F89ABEA0089D0EC /* ExerciseSection.swift in Sources */,
+				2591E2171F89C5F900217DFE /* UIView+Constraints.swift in Sources */,
+				2502B39A1F8C75D80089DDF8 /* Crunches.swift in Sources */,
+				25DE0CD01F8F0E2C00046178 /* CableCrossover.swift in Sources */,
+				253DA3701F89A84C0089D0EC /* DumbellBenchPress.swift in Sources */,
+				253DA3841F89B24E0089D0EC /* PreacherCurl.swift in Sources */,
+				2502B3981F8C75C30089DDF8 /* AbCrunchMachine.swift in Sources */,
+				253DA3821F89B2270089D0EC /* SideLateralRaise.swift in Sources */,
+				25DE0CCC1F8F0DF900046178 /* HammerCurl.swift in Sources */,
+				2502B3921F8C75690089DDF8 /* LyingLegCurls.swift in Sources */,
+				253DA38A1F89B2B20089D0EC /* OneArmDumbellRow.swift in Sources */,
+				253DA37A1F89B1290089D0EC /* Butterfly.swift in Sources */,
+				25DE0CD21F8F0E4C00046178 /* DipsChest.swift in Sources */,
+				2502B3941F8C75880089DDF8 /* StandingCalfRaises.swift in Sources */,
+				253DA3721F89A9C30089D0EC /* WorkoutBuilder.swift in Sources */,
 				253DA33E1F89A4E70089D0EC /* AppDelegate.swift in Sources */,
+				2591E2311F8AD75200217DFE /* FontAwesomeStateRequirement.swift in Sources */,
+				2591E22C1F8AD74F00217DFE /* Enum.swift in Sources */,
+				2591E22F1F8AD75200217DFE /* FontAwesomeImageView.swift in Sources */,
+				2591E2321F8AD75200217DFE /* FontAwesomeTabBarItem.swift in Sources */,
+				253DA37C1F89B1AC0089D0EC /* StandingMilitaryPress.swift in Sources */,
+				253DA36E1F89A6190089D0EC /* Workout.swift in Sources */,
+				2591E2121F89C07500217DFE /* WeightStore.swift in Sources */,
+				2502B38E1F8C75190089DDF8 /* LegExtensions.swift in Sources */,
+				25DE0CC41F8F0BFA00046178 /* ChinUp.swift in Sources */,
+				2591E22E1F8AD75200217DFE /* FontAwesomeImageRepresentable.swift in Sources */,
+				253DA38C1F89B2D40089D0EC /* DumbellShrug.swift in Sources */,
+				2502B38C1F8C74670089DDF8 /* LegPress.swift in Sources */,
+				2502B3901F8C754E0089DDF8 /* SeatedLegCurl.swift in Sources */,
+				253DA3911F89BB390089D0EC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +795,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		253DA3411F89A4E70089D0EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				253DA3421F89A4E70089D0EC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		253DA3461F89A4E70089D0EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -424,12 +915,19 @@
 		};
 		253DA3631F89A4E70089D0EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E6BF4804D3C3C733CF5E7F6 /* Pods-Workouts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MCDBYUBVR;
 				INFOPLIST_FILE = Workouts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hedrick.tyler.Workouts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -439,12 +937,19 @@
 		};
 		253DA3641F89A4E70089D0EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3479E55CBB4275E15EE55237 /* Pods-Workouts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MCDBYUBVR;
 				INFOPLIST_FILE = Workouts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hedrick.tyler.Workouts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -454,6 +959,7 @@
 		};
 		253DA3661F89A4E70089D0EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B26613A1FAA853214055C601 /* Pods-WorkoutsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +977,7 @@
 		};
 		253DA3671F89A4E70089D0EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0305382AC342ECCE1783ABA /* Pods-WorkoutsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +995,7 @@
 		};
 		253DA3691F89A4E70089D0EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8F41AA53D70E03B9DD3F6A /* Pods-WorkoutsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +1012,7 @@
 		};
 		253DA36A1F89A4E70089D0EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F57E315E960DAF9DA8D585A2 /* Pods-WorkoutsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
