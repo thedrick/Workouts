@@ -11,7 +11,7 @@ import UIKit
 
 struct SeatedCalfRaise: Exercise {
   var name: String {
-    return "SeatedCalfRaise"
+    return "Seated Calf Raise"
   }
   
   var images: [URL] {
@@ -50,9 +50,6 @@ struct ConcreteSeatedCalfRaise: ConcreteExercise {
   var repCount: Int {
     return 10
   }
-  
-  var startingWeight: Int {
-    return 20
-  }
+
 }
 

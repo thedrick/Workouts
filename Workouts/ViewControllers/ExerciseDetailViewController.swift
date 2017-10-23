@@ -10,7 +10,7 @@ import UIKit
 
 import SDWebImage
 
-final class ExerciseDetailViewController: UIViewController {
+final class ExerciseDetailViewController: UITableViewController {
   
   init(exercise: Exercise) {
     self.exercise = exercise
@@ -25,53 +25,38 @@ final class ExerciseDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
-    setUpViews()
-    setUpConstriants()
-    populateData()
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "textCell")
+    tableView.register(ImageCell.self, forCellReuseIdentifier: "imageCell")
+    tableView.allowsSelection = false
+    tableView.separatorStyle = .none
+    tableView.reloadData()
+  }
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 3
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    switch indexPath.row {
+    case 0, 1:
+      let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! ImageCell
+      cell.imageURL = exercise.images[indexPath.row]
+      cell.imageDownloadCompletionBlock = { [unowned self] image in
+        if !self.downloadedImages.contains(image) {
+          self.downloadedImages.insert(image)
+          self.tableView.reloadData()
+        }
+      }
+      return cell
+    default:
+      let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath)
+      cell.textLabel?.numberOfLines = 0
+      cell.textLabel?.text = exercise.description
+      return cell
+    }
   }
   
   private let exercise: Exercise
-  private let stackView = UIStackView()
-  private let imageStackView = UIStackView()
-  private let leftImageView = UIImageView()
-  private let rightImageView = UIImageView()
-  private let descriptionTextView = UITextView()
-  
-  private func setUpViews() {
-    [stackView, imageStackView, leftImageView, rightImageView, descriptionTextView].forEach { v in
-      v.translatesAutoresizingMaskIntoConstraints = false
-    }
-    view.addSubview(stackView)
-    stackView.axis = .vertical
-    stackView.spacing = 0
-    stackView.distribution = .fill
-    stackView.addArrangedSubview(imageStackView)
-    stackView.addArrangedSubview(descriptionTextView)
-    
-    imageStackView.axis = .horizontal
-    imageStackView.distribution = .fillEqually
-    imageStackView.alignment = .center
-    imageStackView.spacing = 8
-    imageStackView.addArrangedSubview(leftImageView)
-    imageStackView.addArrangedSubview(rightImageView)
-    
-    descriptionTextView.font = UIFont.preferredFont(forTextStyle: .body)
-    
-    leftImageView.contentMode = .scaleAspectFit
-    leftImageView.clipsToBounds = true
-    rightImageView.contentMode = .scaleAspectFit
-    rightImageView.clipsToBounds = true
-  }
-  
-  private func populateData() {
-    descriptionTextView.text = exercise.description
-    leftImageView.sd_setImage(with: exercise.images.first, completed: nil)
-    rightImageView.sd_setImage(with: exercise.images.last, completed: nil)
-  }
-  
-  private func setUpConstriants() {
-    stackView.constrainToSuperviewMargins()
-//    imageStackView.heightAnchor.constraint(lessThanOrEqualToConstant: 250).isActive = true
-  }
+  private var downloadedImages = Set<UIImage>()
   
 }

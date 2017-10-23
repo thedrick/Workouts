@@ -48,6 +48,9 @@ final class WeightSettingCell: UITableViewCell {
       for: .editingChanged)
     textField.delegate = self
     
+    let toolbar = KeyboardToolbar(responder: textField)
+    textField.inputAccessoryView = toolbar
+    
     addSubview(label)
     addSubview(textField)
   }

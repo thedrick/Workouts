@@ -26,3 +26,41 @@ protocol ConcreteExercise {
   var repCount: Int { get }
   var startingWeight: Int { get }
 }
+
+extension ConcreteExercise {
+  var startingWeight: Int {
+    return WeightStore.shared.weightForWorkout(exercise.name)
+  }
+}
+
+struct StoredWorkout: Codable {
+  var name: String
+  var storedExercises: [StoredExercise]
+  var completedAt: Date
+}
+
+extension StoredWorkout: Equatable {
+  static func ==(lhs: StoredWorkout, rhs: StoredWorkout) -> Bool {
+    return lhs.name == rhs.name &&
+      lhs.storedExercises == rhs.storedExercises &&
+      lhs.completedAt == rhs.completedAt
+  }
+}
+
+struct StoredExercise: Codable {
+  var name: String
+  var setCount: Int
+  var repCount: Int
+  var weight: Int
+  var weightSetAt: Date
+}
+
+extension StoredExercise: Equatable {
+  static func ==(lhs: StoredExercise, rhs: StoredExercise) -> Bool {
+    return lhs.name == rhs.name &&
+      lhs.setCount == rhs.setCount &&
+      lhs.repCount == rhs.repCount &&
+      lhs.weight == rhs.weight &&
+      lhs.weightSetAt == rhs.weightSetAt
+  }
+}

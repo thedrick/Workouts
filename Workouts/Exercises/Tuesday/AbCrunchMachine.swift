@@ -11,7 +11,7 @@ import UIKit
 
 struct AbCrunchMachine: Exercise {
   var name: String {
-    return "AbCrunchMachine"
+    return "Ab Crunch Machine"
   }
   
   var images: [URL] {
@@ -48,9 +48,6 @@ struct ConcreteAbCrunchMachine: ConcreteExercise {
   var repCount: Int {
     return 10
   }
-  
-  var startingWeight: Int {
-    return 20
-  }
+
 }
 

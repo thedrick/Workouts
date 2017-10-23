@@ -15,6 +15,11 @@
 		2502B3961F8C75A50089DDF8 /* SeatedCalfRaise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B3951F8C75A50089DDF8 /* SeatedCalfRaise.swift */; };
 		2502B3981F8C75C30089DDF8 /* AbCrunchMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B3971F8C75C30089DDF8 /* AbCrunchMachine.swift */; };
 		2502B39A1F8C75D80089DDF8 /* Crunches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502B3991F8C75D80089DDF8 /* Crunches.swift */; };
+		2503BDC31F9D9D4500D88BFB /* WorkoutHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503BDC21F9D9D4500D88BFB /* WorkoutHistoryViewController.swift */; };
+		2503BDC51F9DA40400D88BFB /* WorkoutHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503BDC41F9DA40400D88BFB /* WorkoutHistoryCell.swift */; };
+		2526BC8F1F9D2D5E000F391B /* WorkoutStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2526BC8E1F9D2D5E000F391B /* WorkoutStorage.swift */; };
+		2526BC911F9D8FB5000F391B /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2526BC901F9D8FB5000F391B /* ExerciseListViewController.swift */; };
+		2526BC931F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2526BC921F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift */; };
 		253DA33E1F89A4E70089D0EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA33D1F89A4E70089D0EC /* AppDelegate.swift */; };
 		253DA3401F89A4E70089D0EC /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA33F1F89A4E70089D0EC /* WorkoutViewController.swift */; };
 		253DA3451F89A4E70089D0EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253DA3441F89A4E70089D0EC /* Assets.xcassets */; };
@@ -35,9 +40,9 @@
 		253DA3881F89B28B0089D0EC /* WideGripLatPulldown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3871F89B28B0089D0EC /* WideGripLatPulldown.swift */; };
 		253DA38A1F89B2B20089D0EC /* OneArmDumbellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3891F89B2B20089D0EC /* OneArmDumbellRow.swift */; };
 		253DA38C1F89B2D40089D0EC /* DumbellShrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA38B1F89B2D40089D0EC /* DumbellShrug.swift */; };
-		253DA38F1F89B3950089D0EC /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA38E1F89B3950089D0EC /* WorkoutListViewController.swift */; };
 		253DA3911F89BB390089D0EC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3901F89BB390089D0EC /* SettingsViewController.swift */; };
 		253DA3941F89BCA00089D0EC /* WeightSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA3931F89BCA00089D0EC /* WeightSettingCell.swift */; };
+		25469A301F8F425F0084E6BE /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25469A2F1F8F425F0084E6BE /* ImageCell.swift */; };
 		2591E2121F89C07500217DFE /* WeightStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2111F89C07500217DFE /* WeightStore.swift */; };
 		2591E2141F89C45300217DFE /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2131F89C45300217DFE /* ExerciseRow.swift */; };
 		2591E2171F89C5F900217DFE /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2161F89C5F900217DFE /* UIView+Constraints.swift */; };
@@ -55,6 +60,13 @@
 		2591E2341F8AD75200217DFE /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2261F8AD68D00217DFE /* FontAwesomeView.swift */; };
 		2591E2351F8AD7CB00217DFE /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2591E21F1F8AD67400217DFE /* FontAwesome.otf */; };
 		2591E2371F8ADB0800217DFE /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E2361F8ADB0800217DFE /* ExerciseDetailViewController.swift */; };
+		25B2E8AB1F9D19F600ED41AA /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B2E8AA1F9D19F600ED41AA /* KeyboardToolbar.swift */; };
+		25B2E8AD1F9D22A300ED41AA /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B2E8AC1F9D22A300ED41AA /* WorkoutListViewController.swift */; };
+		25D998EC1F90622F008C5EA5 /* DonkeyCalfRaises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D998EB1F90622F008C5EA5 /* DonkeyCalfRaises.swift */; };
+		25D998EE1F9062D8008C5EA5 /* StandingLegCurl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D998ED1F9062D8008C5EA5 /* StandingLegCurl.swift */; };
+		25D998F01F906305008C5EA5 /* HackSquat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D998EF1F906305008C5EA5 /* HackSquat.swift */; };
+		25D998F21F906569008C5EA5 /* FridayStandingCalfRaises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D998F11F906569008C5EA5 /* FridayStandingCalfRaises.swift */; };
+		25D998F41F9065F4008C5EA5 /* FridayLegPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D998F31F9065F4008C5EA5 /* FridayLegPress.swift */; };
 		25DE0CC41F8F0BFA00046178 /* ChinUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CC31F8F0BFA00046178 /* ChinUp.swift */; };
 		25DE0CC61F8F0C1D00046178 /* SeatedCableRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CC51F8F0C1D00046178 /* SeatedCableRows.swift */; };
 		25DE0CC81F8F0D7F00046178 /* UprightCableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CC71F8F0D7F00046178 /* UprightCableRow.swift */; };
@@ -94,6 +106,11 @@
 		2502B3951F8C75A50089DDF8 /* SeatedCalfRaise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatedCalfRaise.swift; sourceTree = "<group>"; };
 		2502B3971F8C75C30089DDF8 /* AbCrunchMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbCrunchMachine.swift; sourceTree = "<group>"; };
 		2502B3991F8C75D80089DDF8 /* Crunches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crunches.swift; sourceTree = "<group>"; };
+		2503BDC21F9D9D4500D88BFB /* WorkoutHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryViewController.swift; sourceTree = "<group>"; };
+		2503BDC41F9DA40400D88BFB /* WorkoutHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryCell.swift; sourceTree = "<group>"; };
+		2526BC8E1F9D2D5E000F391B /* WorkoutStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStorage.swift; sourceTree = "<group>"; };
+		2526BC901F9D8FB5000F391B /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
+		2526BC921F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseWeightHistogramViewController.swift; sourceTree = "<group>"; };
 		253DA33A1F89A4E60089D0EC /* Workouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253DA33D1F89A4E70089D0EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253DA33F1F89A4E70089D0EC /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
@@ -120,9 +137,9 @@
 		253DA3871F89B28B0089D0EC /* WideGripLatPulldown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideGripLatPulldown.swift; sourceTree = "<group>"; };
 		253DA3891F89B2B20089D0EC /* OneArmDumbellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneArmDumbellRow.swift; sourceTree = "<group>"; };
 		253DA38B1F89B2D40089D0EC /* DumbellShrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumbellShrug.swift; sourceTree = "<group>"; };
-		253DA38E1F89B3950089D0EC /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
 		253DA3901F89BB390089D0EC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		253DA3931F89BCA00089D0EC /* WeightSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightSettingCell.swift; sourceTree = "<group>"; };
+		25469A2F1F8F425F0084E6BE /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		258666CF8FFFFA1598B901C8 /* Pods_Workouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workouts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2591E2111F89C07500217DFE /* WeightStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightStore.swift; sourceTree = "<group>"; };
 		2591E2131F89C45300217DFE /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
@@ -141,6 +158,13 @@
 		2591E2291F8AD68E00217DFE /* FontAwesomeImageRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageRepresentable.swift; sourceTree = "<group>"; };
 		2591E22A1F8AD68E00217DFE /* FontAwesomeSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeSegmentedControl.swift; sourceTree = "<group>"; };
 		2591E2361F8ADB0800217DFE /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
+		25B2E8AA1F9D19F600ED41AA /* KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
+		25B2E8AC1F9D22A300ED41AA /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
+		25D998EB1F90622F008C5EA5 /* DonkeyCalfRaises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyCalfRaises.swift; sourceTree = "<group>"; };
+		25D998ED1F9062D8008C5EA5 /* StandingLegCurl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingLegCurl.swift; sourceTree = "<group>"; };
+		25D998EF1F906305008C5EA5 /* HackSquat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackSquat.swift; sourceTree = "<group>"; };
+		25D998F11F906569008C5EA5 /* FridayStandingCalfRaises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayStandingCalfRaises.swift; sourceTree = "<group>"; };
+		25D998F31F9065F4008C5EA5 /* FridayLegPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayLegPress.swift; sourceTree = "<group>"; };
 		25DE0CC31F8F0BFA00046178 /* ChinUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinUp.swift; sourceTree = "<group>"; };
 		25DE0CC51F8F0C1D00046178 /* SeatedCableRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatedCableRows.swift; sourceTree = "<group>"; };
 		25DE0CC71F8F0D7F00046178 /* UprightCableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UprightCableRow.swift; sourceTree = "<group>"; };
@@ -259,6 +283,7 @@
 		253DA33C1F89A4E60089D0EC /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
+				25B2E8A91F9D19E000ED41AA /* Views */,
 				2591E21E1F8AD66500217DFE /* Application */,
 				2591E21D1F8AD65700217DFE /* Resources */,
 				2591E21A1F8AD52500217DFE /* Global */,
@@ -299,6 +324,7 @@
 				253DA36D1F89A6190089D0EC /* Workout.swift */,
 				253DA3711F89A9C30089D0EC /* WorkoutBuilder.swift */,
 				2591E2111F89C07500217DFE /* WeightStore.swift */,
+				2526BC8E1F9D2D5E000F391B /* WorkoutStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +343,7 @@
 				2502B3891F8C735D0089DDF8 /* Monday */,
 				2502B38A1F8C73650089DDF8 /* Tuesday */,
 				25DE0CC21F8F0B5A00046178 /* Thursday */,
+				25D998EA1F906210008C5EA5 /* Friday */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -325,9 +352,12 @@
 			isa = PBXGroup;
 			children = (
 				253DA33F1F89A4E70089D0EC /* WorkoutViewController.swift */,
-				253DA38E1F89B3950089D0EC /* WorkoutListViewController.swift */,
 				253DA3901F89BB390089D0EC /* SettingsViewController.swift */,
 				2591E2361F8ADB0800217DFE /* ExerciseDetailViewController.swift */,
+				25B2E8AC1F9D22A300ED41AA /* WorkoutListViewController.swift */,
+				2526BC901F9D8FB5000F391B /* ExerciseListViewController.swift */,
+				2526BC921F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift */,
+				2503BDC21F9D9D4500D88BFB /* WorkoutHistoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -338,6 +368,8 @@
 				253DA3931F89BCA00089D0EC /* WeightSettingCell.swift */,
 				2591E2131F89C45300217DFE /* ExerciseRow.swift */,
 				2591E2181F8A8F6A00217DFE /* WorkoutSectionHeader.swift */,
+				25469A2F1F8F425F0084E6BE /* ImageCell.swift */,
+				2503BDC41F9DA40400D88BFB /* WorkoutHistoryCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -389,6 +421,26 @@
 				2591E2261F8AD68D00217DFE /* FontAwesomeView.swift */,
 			);
 			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		25B2E8A91F9D19E000ED41AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25B2E8AA1F9D19F600ED41AA /* KeyboardToolbar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		25D998EA1F906210008C5EA5 /* Friday */ = {
+			isa = PBXGroup;
+			children = (
+				25D998EB1F90622F008C5EA5 /* DonkeyCalfRaises.swift */,
+				25D998ED1F9062D8008C5EA5 /* StandingLegCurl.swift */,
+				25D998EF1F906305008C5EA5 /* HackSquat.swift */,
+				25D998F11F906569008C5EA5 /* FridayStandingCalfRaises.swift */,
+				25D998F31F9065F4008C5EA5 /* FridayLegPress.swift */,
+			);
+			path = Friday;
 			sourceTree = "<group>";
 		};
 		25DE0CC21F8F0B5A00046178 /* Thursday */ = {
@@ -595,11 +647,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Workouts/Pods-Workouts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftChart/SwiftChart.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftChart.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -709,10 +765,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2526BC911F9D8FB5000F391B /* ExerciseListViewController.swift in Sources */,
 				2502B3961F8C75A50089DDF8 /* SeatedCalfRaise.swift in Sources */,
 				2591E22B1F8AD74C00217DFE /* FontAwesome.swift in Sources */,
 				2591E2191F8A8F6A00217DFE /* WorkoutSectionHeader.swift in Sources */,
 				25DE0CC61F8F0C1D00046178 /* SeatedCableRows.swift in Sources */,
+				25D998EC1F90622F008C5EA5 /* DonkeyCalfRaises.swift in Sources */,
 				2591E21C1F8AD52F00217DFE /* Colors.swift in Sources */,
 				253DA3801F89B1FA0089D0EC /* LyingTricpesPress.swift in Sources */,
 				25DE0CCA1F8F0DDE00046178 /* EZBarCurl.swift in Sources */,
@@ -720,9 +778,9 @@
 				253DA3881F89B28B0089D0EC /* WideGripLatPulldown.swift in Sources */,
 				253DA3401F89A4E70089D0EC /* WorkoutViewController.swift in Sources */,
 				2591E22D1F8AD75200217DFE /* FontAwesomeBarButtonItem.swift in Sources */,
-				253DA38F1F89B3950089D0EC /* WorkoutListViewController.swift in Sources */,
 				253DA3861F89B2620089D0EC /* SeatedDumbellCurl.swift in Sources */,
 				2591E2331F8AD75200217DFE /* FontAwesomeTextRepresentable.swift in Sources */,
+				2503BDC31F9D9D4500D88BFB /* WorkoutHistoryViewController.swift in Sources */,
 				2591E2341F8AD75200217DFE /* FontAwesomeView.swift in Sources */,
 				253DA37E1F89B1DA0089D0EC /* TricepsPushdown.swift in Sources */,
 				2591E2301F8AD75200217DFE /* FontAwesomeSegmentedControl.swift in Sources */,
@@ -734,14 +792,20 @@
 				2591E2171F89C5F900217DFE /* UIView+Constraints.swift in Sources */,
 				2502B39A1F8C75D80089DDF8 /* Crunches.swift in Sources */,
 				25DE0CD01F8F0E2C00046178 /* CableCrossover.swift in Sources */,
+				25D998EE1F9062D8008C5EA5 /* StandingLegCurl.swift in Sources */,
+				25469A301F8F425F0084E6BE /* ImageCell.swift in Sources */,
 				253DA3701F89A84C0089D0EC /* DumbellBenchPress.swift in Sources */,
 				253DA3841F89B24E0089D0EC /* PreacherCurl.swift in Sources */,
 				2502B3981F8C75C30089DDF8 /* AbCrunchMachine.swift in Sources */,
 				253DA3821F89B2270089D0EC /* SideLateralRaise.swift in Sources */,
+				25D998F21F906569008C5EA5 /* FridayStandingCalfRaises.swift in Sources */,
+				2503BDC51F9DA40400D88BFB /* WorkoutHistoryCell.swift in Sources */,
 				25DE0CCC1F8F0DF900046178 /* HammerCurl.swift in Sources */,
 				2502B3921F8C75690089DDF8 /* LyingLegCurls.swift in Sources */,
 				253DA38A1F89B2B20089D0EC /* OneArmDumbellRow.swift in Sources */,
+				25D998F41F9065F4008C5EA5 /* FridayLegPress.swift in Sources */,
 				253DA37A1F89B1290089D0EC /* Butterfly.swift in Sources */,
+				25D998F01F906305008C5EA5 /* HackSquat.swift in Sources */,
 				25DE0CD21F8F0E4C00046178 /* DipsChest.swift in Sources */,
 				2502B3941F8C75880089DDF8 /* StandingCalfRaises.swift in Sources */,
 				253DA3721F89A9C30089D0EC /* WorkoutBuilder.swift in Sources */,
@@ -754,8 +818,12 @@
 				253DA36E1F89A6190089D0EC /* Workout.swift in Sources */,
 				2591E2121F89C07500217DFE /* WeightStore.swift in Sources */,
 				2502B38E1F8C75190089DDF8 /* LegExtensions.swift in Sources */,
+				2526BC931F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift in Sources */,
+				25B2E8AD1F9D22A300ED41AA /* WorkoutListViewController.swift in Sources */,
 				25DE0CC41F8F0BFA00046178 /* ChinUp.swift in Sources */,
 				2591E22E1F8AD75200217DFE /* FontAwesomeImageRepresentable.swift in Sources */,
+				25B2E8AB1F9D19F600ED41AA /* KeyboardToolbar.swift in Sources */,
+				2526BC8F1F9D2D5E000F391B /* WorkoutStorage.swift in Sources */,
 				253DA38C1F89B2D40089D0EC /* DumbellShrug.swift in Sources */,
 				2502B38C1F8C74670089DDF8 /* LegPress.swift in Sources */,
 				2502B3901F8C754E0089DDF8 /* SeatedLegCurl.swift in Sources */,

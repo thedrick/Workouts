@@ -15,29 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     self.window = UIWindow(frame: UIScreen.main.bounds)
-    let monday = WorkoutViewController(
-      workout: WorkoutBuilder.mondayWorkout,
-      tabTitle: "Monday")
-    let tuesday = WorkoutViewController(
-      workout: WorkoutBuilder.tuesdayWorkout,
-      tabTitle: "Tuesday")
-    let thursday = WorkoutViewController(
-      workout: WorkoutBuilder.thursdayWorkout,
-      tabTitle: "Thursday")
-    let tabVC = UITabBarController()
-    let navVCs = [monday, tuesday, thursday].map { vc -> UINavigationController in
-      return UINavigationController(rootViewController: vc)
-    }
-    tabVC.viewControllers = navVCs
+
+    let listVC = WorkoutListViewController()
+    let listNav = UINavigationController(rootViewController: listVC)
     
-    let todayComponents = Calendar.current.dateComponents(in: TimeZone.current, from: Date())
-    var startingIndex = 0
-    if todayComponents.weekday == 3 {
-      startingIndex = 1
-    } else if todayComponents.weekday == 5 {
-      startingIndex = 2
-    }
-    tabVC.selectedIndex = startingIndex
+    let exerciseVC = ExerciseListViewController()
+    let exerciseNav = UINavigationController(rootViewController: exerciseVC)
+    
+    let tabVC = UITabBarController()
+    tabVC.viewControllers = [listNav, exerciseNav]
+    
+    UINavigationBar.appearance().tintColor = Colors.primaryColor
+    UITabBar.appearance().tintColor = Colors.primaryColor
     
     self.window!.rootViewController = tabVC
     self.window!.makeKeyAndVisible()

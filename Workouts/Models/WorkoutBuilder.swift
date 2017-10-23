@@ -13,8 +13,21 @@ struct WorkoutBuilder {
   static var workoutWeek = [
     WorkoutBuilder.mondayWorkout,
     WorkoutBuilder.tuesdayWorkout,
-    WorkoutBuilder.thursdayWorkout
+    WorkoutBuilder.thursdayWorkout,
+    WorkoutBuilder.fridayWorkout
   ]
+  
+  static var todayWorkout: Workout? {
+    let todayComponents = Calendar.current.dateComponents(in: TimeZone.current, from: Date())
+    guard let weekday = todayComponents.weekday else { return nil }
+    switch weekday {
+    case 2: return mondayWorkout
+    case 3: return tuesdayWorkout
+    case 5: return thursdayWorkout
+    case 6: return fridayWorkout
+    default: return nil
+    }
+  }
   
   static var mondayWorkout: Workout {
     return Workout(
@@ -64,6 +77,21 @@ struct WorkoutBuilder {
         ConcreteStandingMilitaryPress(),
         ConcreteDipsChest(),
         ConcreteTricepsPushdown()
+      ])
+  }
+  
+  static var fridayWorkout: Workout {
+    return Workout(
+      name: "Friday - Lower Body",
+      exercises: [
+        ConcreteDonkeyCalfRaises(),
+        ConcreteFridayStandingCalfRaises(),
+        ConcreteSeatedLegCurl(),
+        ConcreteStandingLegCurl(),
+        ConcreteFridayLegPress(),
+        ConcreteHackSquat(),
+        ConcreteAbCrunchMachine(),
+        ConcreteCrunches()
       ])
   }
   

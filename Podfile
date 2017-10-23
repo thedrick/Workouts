@@ -9,6 +9,8 @@ target 'Workouts' do
 
   # Pods for Workouts
   pod 'SDWebImage'
+  pod 'Disk', '~> 0.3.1'
+  pod 'SwiftChart', '~> 0.5.0'
 
   target 'WorkoutsTests' do
     inherit! :search_paths

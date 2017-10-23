@@ -22,11 +22,15 @@ struct ExerciseSection {
   
   func setIsComplete(_ isComplete: Bool, atIndex idx: Int) -> ExerciseSection {
     var models = cellModels
-    let oldModel = cellModels[idx]
-    let updatedModel = ExerciseCellModel(
-      exercise: oldModel.exercise,
-      isComplete: isComplete)
-    models[idx] = updatedModel
+    models[idx].setIsComplete(isComplete)
+    return ExerciseSection(
+      title: title,
+      cellModels: models)
+  }
+  
+  func setWeight(_ weight: Int, atIndex idx: Int) -> ExerciseSection {
+    var models = cellModels
+    models[idx].setWeight(weight)
     return ExerciseSection(
       title: title,
       cellModels: models)
@@ -36,6 +40,16 @@ struct ExerciseSection {
 struct ExerciseCellModel {
   let exercise: ConcreteExercise
   var isComplete: Bool
+  var weight: Int
+  
+  mutating func setWeight(_ weight: Int) {
+    self.weight = weight
+  }
+  
+  mutating func setIsComplete(_ isComplete: Bool) {
+    self.isComplete = isComplete
+  }
+
 }
 
 struct ExerciseSectionBuilder {
@@ -49,7 +63,11 @@ struct ExerciseSectionBuilder {
   private static func cellModels(with exercise: ConcreteExercise) -> [ExerciseCellModel] {
     var models = [ExerciseCellModel]()
     for _ in 1...exercise.setCount {
-      models.append(ExerciseCellModel(exercise: exercise, isComplete: false))
+      models.append(
+        ExerciseCellModel(
+          exercise: exercise,
+          isComplete: false,
+          weight: exercise.startingWeight))
     }
     return models
   }

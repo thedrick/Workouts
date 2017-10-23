@@ -10,6 +10,6 @@ import UIKit
 
 struct Colors {
   
-  static let headerBackground = UIColor(red: 107/255, green: 148/255, blue: 130/255, alpha: 1)
+  static let primaryColor = UIColor(red: 111/255, green: 0/255, blue: 128/255, alpha: 1)
   
 }

@@ -29,32 +29,54 @@ final class ExerciseComponentStackView: UIView {
   }
   
   public var value: String? {
-    get { return valueLabel.text }
-    set { valueLabel.text = newValue }
+    get { return valueField.text }
+    set { valueField.text = newValue }
   }
   
-  private let stackView = UIStackView()
-  private let titleLabel = UILabel()
-  private let valueLabel = UILabel()
+  public var isEditable: Bool = false {
+    didSet { valueField.isEnabled = isEditable }
+  }
+  
+  public var textChangedBlock: ((String?) -> Void) = { _ in }
+  
+  fileprivate let stackView = UIStackView()
+  fileprivate let titleLabel = UILabel()
+  fileprivate let valueField = UITextField()
   
   private func setUpViews() {
     stackView.translatesAutoresizingMaskIntoConstraints = false
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    valueLabel.translatesAutoresizingMaskIntoConstraints = false
+    valueField.translatesAutoresizingMaskIntoConstraints = false
     
     stackView.axis = .vertical
     stackView.alignment = .center
     
     titleLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
-    valueLabel.font = UIFont.preferredFont(forTextStyle: .title1)
+    valueField.font = UIFont.preferredFont(forTextStyle: .title1)
+    
+    valueField.isEnabled = false
+    valueField.keyboardType = .numberPad
+    valueField.returnKeyType = .done
+    valueField.delegate = self
+    let keyboardToolbar = KeyboardToolbar(responder: valueField)
+    keyboardToolbar.sizeToFit()
+    valueField.inputAccessoryView = keyboardToolbar
 
     addSubview(stackView)
     stackView.addArrangedSubview(titleLabel)
-    stackView.addArrangedSubview(valueLabel)
+    stackView.addArrangedSubview(valueField)
   }
   
   private func setUpConstraints() {
     stackView.constrainToSuperviewMargins()
+  }
+  
+}
+
+extension ExerciseComponentStackView: UITextFieldDelegate {
+  
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    textChangedBlock(textField.text)
   }
   
 }
@@ -90,6 +112,11 @@ final class ExerciseRow: UITableViewCell {
     set { accessoryType = newValue ? .checkmark : .none }
   }
   
+  public var weightChangedBlock: ((String?) -> Void) {
+    set { weightStackView.textChangedBlock = newValue }
+    get { return weightStackView.textChangedBlock }
+  }
+  
   public func toggleComplete() {
     isComplete = !isComplete
   }
@@ -107,6 +134,7 @@ final class ExerciseRow: UITableViewCell {
     
     repsStackView.title = "REPS"
     weightStackView.title = "LBS"
+    weightStackView.isEditable = true
   }
   
   private func setUpConstraints() {

@@ -47,8 +47,5 @@ struct ConcreteButterfly: ConcreteExercise {
   var repCount: Int {
     return 10
   }
-  
-  var startingWeight: Int {
-    return 20
-  }
+
 }

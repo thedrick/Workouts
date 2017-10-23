@@ -11,7 +11,7 @@ import UIKit
 
 struct LegExtensions: Exercise {
   var name: String {
-    return "LegExtensions"
+    return "Leg Extensions"
   }
   
   var images: [URL] {
@@ -48,9 +48,6 @@ struct ConcreteLegExtensions: ConcreteExercise {
   var repCount: Int {
     return 10
   }
-  
-  var startingWeight: Int {
-    return 20
-  }
+
 }
 

@@ -1,14 +1,20 @@
 PODS:
+  - Disk (0.3.1)
   - SDWebImage (4.1.1):
     - SDWebImage/Core (= 4.1.1)
   - SDWebImage/Core (4.1.1)
+  - SwiftChart (0.5.0)
 
 DEPENDENCIES:
+  - Disk (~> 0.3.1)
   - SDWebImage
+  - SwiftChart (~> 0.5.0)
 
 SPEC CHECKSUMS:
+  Disk: 64f0f95a4163314aba6f09f010f17de964762140
   SDWebImage: caf91ee75671c95eb7b3073cd90649d25f852a88
+  SwiftChart: d1d22d2b1c4582f4d561edf97a210059c00ee256
 
-PODFILE CHECKSUM: 12c904ce2f7b16b739b8f3003f9ac34d1256fd70
+PODFILE CHECKSUM: cedc87388adc8e6911aa33c8abcd13d4f91b945d
 
 COCOAPODS: 1.3.1

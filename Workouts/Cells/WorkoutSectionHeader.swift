@@ -29,7 +29,9 @@ final class WorkoutSectionHeader: UIControl {
     get { return titleLabel.text }
   }
   
-  public var didTapBlock: ((WorkoutSectionHeader) -> Void)? = nil
+  public var didTapBlock: ((WorkoutSectionHeader) -> Void)? = nil {
+    didSet { chevronLabel.isHidden = (didTapBlock == nil) }
+  }
   
   // MARK: Private
   
@@ -37,7 +39,7 @@ final class WorkoutSectionHeader: UIControl {
   private let chevronLabel = UILabel()
   
   private func setUpViews() {
-    backgroundColor = Colors.headerBackground
+    backgroundColor = Colors.primaryColor
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
     titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
     titleLabel.textColor = .white
@@ -46,6 +48,7 @@ final class WorkoutSectionHeader: UIControl {
     chevronLabel.textColor = .white
     chevronLabel.font = UIFont.fontAwesome(ofSize: 17)
     chevronLabel.text = String.fontAwesomeIcon(name: .chevronRight)
+    chevronLabel.isHidden = true
     
     addSubview(titleLabel)
     addSubview(chevronLabel)

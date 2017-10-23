@@ -10,11 +10,10 @@ import UIKit
 
 class WorkoutViewController: UITableViewController {
   
-  init(workout: Workout, tabTitle: String? = nil) {
+  init(workout: Workout) {
     self.workout = workout
     super.init(style: .grouped)
-    self.title = tabTitle
-    self.navigationItem.title = workout.name
+    self.title = workout.name
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -24,12 +23,19 @@ class WorkoutViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationItem.leftBarButtonItem = UIBarButtonItem(
-      title: "Weights",
+      title: "Cancel",
       style: .plain,
       target: self,
-      action: #selector(settingsTapped))
+      action: #selector(cancelTapped))
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "Finish",
+      style: .done,
+      target: self,
+      action: #selector(finishTapped))
     
     tableView.register(ExerciseRow.self, forCellReuseIdentifier: "cell")
+    tableView.keyboardDismissMode = .onDrag
     buildSections()
     tableView.rowHeight = 72
     tableView.reloadData()
@@ -67,11 +73,16 @@ class WorkoutViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ExerciseRow
     let section = sections[indexPath.section]
     let cellModel = section.cellModelForIndex(idx: indexPath.row)
-    let weight = WeightStore.shared.weightForWorkout(cellModel.exercise.exercise.name)
+    let weight = cellModel.weight
     cell.number = indexPath.row + 1
     cell.repCount = String(cellModel.exercise.repCount)
     cell.weight = String(weight)
     cell.isComplete = cellModel.isComplete
+    cell.weightChangedBlock = { [weak self] weightString in
+      guard let weightStr = weightString, let weight = Int(weightStr) else { return }
+      let newSection = section.setWeight(weight, atIndex: indexPath.row)
+      self?.sections[indexPath.section] = newSection
+    }
     return cell
   }
   
@@ -99,10 +110,59 @@ class WorkoutViewController: UITableViewController {
     navigationController?.pushViewController(detailVC, animated: true)
   }
   
-  @objc private func settingsTapped() {
-    let vc = SettingsViewController(workout: workout)
-    let nav = UINavigationController(rootViewController: vc)
-    present(nav, animated: true, completion: nil)
+  @objc private func cancelTapped() {
+    let alert = UIAlertController(
+      title: "Cancel workout?",
+      message: "Are you sure you want to end this workout? Your progress will not be saved.",
+      preferredStyle: .alert)
+    alert.addAction(UIAlertAction(
+      title: "Cancel",
+      style: .cancel,
+      handler: nil))
+    alert.addAction(UIAlertAction(
+      title: "End workout",
+      style: .destructive,
+      handler: { [weak self] _ in
+        self?.dismiss(animated: true, completion: nil)
+    }))
+    present(alert, animated: true, completion: nil)
+  }
+  
+  @objc private func finishTapped() {
+    let alert = UIAlertController(
+      title: "Finished workout",
+      message: "Are you finished with your workout?",
+      preferredStyle: .alert)
+    alert.addAction(UIAlertAction(
+      title: "Cancel",
+      style: .cancel,
+      handler: nil))
+    alert.addAction(UIAlertAction(
+      title: "Done",
+      style: .default,
+      handler: { [weak self] _ in
+        self?.finishWorkout()
+    }))
+    present(alert, animated: true, completion: nil)
+  }
+  
+  private func finishWorkout() {
+    let storedExercises = sections.map { section in
+      return section.cellModels.map { model in
+        return StoredExercise(
+          name: model.exercise.exercise.name,
+          setCount: model.exercise.setCount,
+          repCount: model.exercise.repCount,
+          weight: model.weight,
+          weightSetAt: Date())
+      }
+    }.flatMap { $0 }
+    let storedWorkout = StoredWorkout(
+      name: workout.name,
+      storedExercises: storedExercises,
+      completedAt: Date())
+    WorkoutStorage.shared.saveWorkout(storedWorkout)
+    dismiss(animated: true, completion: nil)
   }
 
 }
