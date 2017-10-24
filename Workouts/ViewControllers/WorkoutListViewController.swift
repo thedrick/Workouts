@@ -42,6 +42,10 @@ final class WorkoutListViewController: UITableViewController {
     
     self.loadWorkouts()
     title = "Workouts"
+    tabBarItem.image = UIImage.fontAwesomeIcon(
+      name: FontAwesome.list,
+      textColor: Colors.primaryColor,
+      size: CGSize(width: 30, height: 30))
   }
   
   required init?(coder aDecoder: NSCoder) {

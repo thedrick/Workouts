@@ -13,6 +13,10 @@ final class ExerciseListViewController: UITableViewController {
   init() {
     super.init(style: .grouped)
     title = "Exercises"
+    tabBarItem.image = UIImage.fontAwesomeIcon(
+      name: FontAwesome.barChart,
+      textColor: Colors.primaryColor,
+      size: CGSize(width: 30, height: 30))
   }
   
   required init?(coder aDecoder: NSCoder) {

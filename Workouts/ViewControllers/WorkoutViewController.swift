@@ -80,8 +80,11 @@ class WorkoutViewController: UITableViewController {
     cell.isComplete = cellModel.isComplete
     cell.weightChangedBlock = { [weak self] weightString in
       guard let weightStr = weightString, let weight = Int(weightStr) else { return }
-      let newSection = section.setWeight(weight, atIndex: indexPath.row)
-      self?.sections[indexPath.section] = newSection
+      // grab the section in the VC's ivar since they may have changed since the last time
+      if let section = self?.sections[indexPath.section] {
+        let newSection = section.setWeight(weight, atIndex: indexPath.row)
+        self?.sections[indexPath.section] = newSection
+      }
     }
     return cell
   }
@@ -147,6 +150,7 @@ class WorkoutViewController: UITableViewController {
   }
   
   private func finishWorkout() {
+    let today = Date()
     let storedExercises = sections.map { section in
       return section.cellModels.map { model in
         return StoredExercise(
@@ -154,13 +158,13 @@ class WorkoutViewController: UITableViewController {
           setCount: model.exercise.setCount,
           repCount: model.exercise.repCount,
           weight: model.weight,
-          weightSetAt: Date())
+          weightSetAt: today)
       }
     }.flatMap { $0 }
     let storedWorkout = StoredWorkout(
       name: workout.name,
       storedExercises: storedExercises,
-      completedAt: Date())
+      completedAt: today)
     WorkoutStorage.shared.saveWorkout(storedWorkout)
     dismiss(animated: true, completion: nil)
   }

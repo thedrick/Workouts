@@ -70,9 +70,11 @@ final class ExerciseWeightHistogramViewController: UIViewController {
   private func loadData() {
     guard let workouts = WorkoutStorage.shared.getWorkouts() else { return }
     let exercises = workouts.map { workout in
-      return workout.storedExercises.first { return $0.name == exercise.name }
+      return workout.storedExercises.filter { return $0.name == exercise.name }
     }
     storedExercises = exercises.flatMap { $0 }
+    guard storedExercises.count > 0 else { return }
+    
     tableView.reloadData()
     
     let chartData = storedExercises.map { return Float($0.weight) }
