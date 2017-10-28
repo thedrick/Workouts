@@ -22,6 +22,12 @@ struct WorkoutStartItem {
       title: "Start workout: \(todayWorkout.name)",
       workout: todayWorkout)
   }
+  
+  static func resumeItemWithWorkout(_ workout: Workout) -> WorkoutStartItem {
+    return WorkoutStartItem(
+      title: "Resume workout: \(workout.name)",
+      workout: workout)
+  }
 }
 
 struct WorkoutHistoryItem {
@@ -31,16 +37,14 @@ struct WorkoutHistoryItem {
 final class WorkoutListViewController: UITableViewController {
   
   init() {
-    var items = [ WorkoutStartItem.newWorkout ]
-    if let todayItem = WorkoutStartItem.todayWorkout {
-      items.append(todayItem)
-    }
-    workoutStartItems = items
+    workoutStartItems = []
     workoutHistoryItems = []
     
     super.init(style: .grouped)
     
-    self.loadWorkouts()
+    loadWorkouts()
+    refreshStartItems()
+    
     title = "Workouts"
     tabBarItem.image = UIImage.fontAwesomeIcon(
       name: FontAwesome.list,
@@ -56,11 +60,15 @@ final class WorkoutListViewController: UITableViewController {
     super.viewDidLoad()
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     tableView.register(WorkoutHistoryCell.self, forCellReuseIdentifier: "historyCell")
+    if let incompleteWorkout = IncompleteWorkoutStorage.workoutForIncompleteWorkout {
+      showWorkoutViewController(with: incompleteWorkout)
+    }
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     loadWorkouts()
+    refreshStartItems()
     tableView.reloadData()
   }
   
@@ -123,7 +131,7 @@ final class WorkoutListViewController: UITableViewController {
   
   // MARK: Private
   
-  private let workoutStartItems: [WorkoutStartItem]
+  private var workoutStartItems: [WorkoutStartItem]
   private var workoutHistoryItems: [WorkoutHistoryItem]
   private lazy var dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -176,13 +184,24 @@ final class WorkoutListViewController: UITableViewController {
   }
   
   private func loadWorkouts() {
-    if let workoutHistory = WorkoutStorage.shared.getWorkouts() {
+    if let workoutHistory = WorkoutStorage.shared.getWorkouts()?.reversed() {
       workoutHistoryItems = workoutHistory.map { workout in
         return WorkoutHistoryItem(workout: workout)
       }
     } else {
       workoutHistoryItems = []
     }
+  }
+  
+  private func refreshStartItems() {
+    var items = [ WorkoutStartItem.newWorkout ]
+    if let todayItem = WorkoutStartItem.todayWorkout {
+      items.append(todayItem)
+    }
+    if let incompleteWorkout = IncompleteWorkoutStorage.workoutForIncompleteWorkout {
+      items.append(WorkoutStartItem.resumeItemWithWorkout(incompleteWorkout))
+    }
+    workoutStartItems = items
   }
   
 }

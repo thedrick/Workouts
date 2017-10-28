@@ -20,6 +20,7 @@
 		2526BC8F1F9D2D5E000F391B /* WorkoutStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2526BC8E1F9D2D5E000F391B /* WorkoutStorage.swift */; };
 		2526BC911F9D8FB5000F391B /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2526BC901F9D8FB5000F391B /* ExerciseListViewController.swift */; };
 		2526BC931F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2526BC921F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift */; };
+		253861191FA3045F00B81FDD /* IncompleteWorkoutStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253861181FA3045F00B81FDD /* IncompleteWorkoutStorage.swift */; };
 		253DA33E1F89A4E70089D0EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA33D1F89A4E70089D0EC /* AppDelegate.swift */; };
 		253DA3401F89A4E70089D0EC /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253DA33F1F89A4E70089D0EC /* WorkoutViewController.swift */; };
 		253DA3451F89A4E70089D0EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253DA3441F89A4E70089D0EC /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		2526BC8E1F9D2D5E000F391B /* WorkoutStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStorage.swift; sourceTree = "<group>"; };
 		2526BC901F9D8FB5000F391B /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 		2526BC921F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseWeightHistogramViewController.swift; sourceTree = "<group>"; };
+		253861181FA3045F00B81FDD /* IncompleteWorkoutStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncompleteWorkoutStorage.swift; sourceTree = "<group>"; };
 		253DA33A1F89A4E60089D0EC /* Workouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253DA33D1F89A4E70089D0EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253DA33F1F89A4E70089D0EC /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				253DA3711F89A9C30089D0EC /* WorkoutBuilder.swift */,
 				2591E2111F89C07500217DFE /* WeightStore.swift */,
 				2526BC8E1F9D2D5E000F391B /* WorkoutStorage.swift */,
+				253861181FA3045F00B81FDD /* IncompleteWorkoutStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -790,6 +793,7 @@
 				25DE0CC81F8F0D7F00046178 /* UprightCableRow.swift in Sources */,
 				253DA3771F89ABEA0089D0EC /* ExerciseSection.swift in Sources */,
 				2591E2171F89C5F900217DFE /* UIView+Constraints.swift in Sources */,
+				253861191FA3045F00B81FDD /* IncompleteWorkoutStorage.swift in Sources */,
 				2502B39A1F8C75D80089DDF8 /* Crunches.swift in Sources */,
 				25DE0CD01F8F0E2C00046178 /* CableCrossover.swift in Sources */,
 				25D998EE1F9062D8008C5EA5 /* StandingLegCurl.swift in Sources */,

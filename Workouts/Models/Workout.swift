@@ -53,6 +53,7 @@ struct StoredExercise: Codable {
   var repCount: Int
   var weight: Int
   var weightSetAt: Date
+  var isComplete: Bool?
 }
 
 extension StoredExercise: Equatable {
@@ -61,6 +62,7 @@ extension StoredExercise: Equatable {
       lhs.setCount == rhs.setCount &&
       lhs.repCount == rhs.repCount &&
       lhs.weight == rhs.weight &&
-      lhs.weightSetAt == rhs.weightSetAt
+      lhs.weightSetAt == rhs.weightSetAt &&
+      lhs.isComplete == rhs.isComplete
   }
 }

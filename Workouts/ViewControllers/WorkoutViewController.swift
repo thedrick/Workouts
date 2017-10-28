@@ -37,6 +37,7 @@ class WorkoutViewController: UITableViewController {
     tableView.register(ExerciseRow.self, forCellReuseIdentifier: "cell")
     tableView.keyboardDismissMode = .onDrag
     buildSections()
+    restoreSectionsIfNeeded()
     tableView.rowHeight = 72
     tableView.reloadData()
   }
@@ -83,7 +84,7 @@ class WorkoutViewController: UITableViewController {
       // grab the section in the VC's ivar since they may have changed since the last time
       if let section = self?.sections[indexPath.section] {
         let newSection = section.setWeight(weight, atIndex: indexPath.row)
-        self?.sections[indexPath.section] = newSection
+        self?.updateSection(newSection, atIndex: indexPath.section)
       }
     }
     return cell
@@ -93,7 +94,8 @@ class WorkoutViewController: UITableViewController {
     let cell = tableView.cellForRow(at: indexPath) as! ExerciseRow
     cell.toggleComplete()
     let section = sections[indexPath.section]
-    sections[indexPath.section] = section.setIsComplete(cell.isComplete, atIndex: indexPath.row)
+    let newSection = section.setIsComplete(cell.isComplete, atIndex: indexPath.row)
+    updateSection(newSection, atIndex: indexPath.section)
     tableView.deselectRow(at: indexPath, animated: false)
   }
   
@@ -105,6 +107,33 @@ class WorkoutViewController: UITableViewController {
   func buildSections() {
     sections = workout.exercises.map { exercise in
       return ExerciseSectionBuilder.emptySection(with: exercise)
+    }
+  }
+  
+  func updateSection(_ section: ExerciseSection, atIndex index: Int) {
+    sections[index] = section
+    IncompleteWorkoutStorage.shared.savePartialWorkout(generateStoredWorkout())
+  }
+  
+  func restoreSectionsIfNeeded() {
+    if let partialWorkout = IncompleteWorkoutStorage.shared.loadPartialWorkout() {
+      guard partialWorkout.name == workout.name else { return }
+      var updatedSections = sections
+      sections.enumerated().forEach { sectionIndex, section in
+        let storedExercies = partialWorkout.storedExercises.filter { $0.name == section.title }
+        var updatedCellModels = section.cellModels
+        storedExercies.enumerated().forEach { idx, exercise in
+          var model = updatedCellModels[idx]
+          model.setWeight(exercise.weight)
+          model.setIsComplete(exercise.isComplete ?? false)
+          updatedCellModels[idx] = model
+        }
+        updatedSections[sectionIndex] = ExerciseSection(
+          title: section.title,
+          cellModels: updatedCellModels)
+      }
+      sections = updatedSections
+      tableView.reloadData()
     }
   }
   
@@ -123,9 +152,19 @@ class WorkoutViewController: UITableViewController {
       style: .cancel,
       handler: nil))
     alert.addAction(UIAlertAction(
-      title: "End workout",
+      title: "Delete workout",
       style: .destructive,
       handler: { [weak self] _ in
+        IncompleteWorkoutStorage.shared.deletePartialWorkout()
+        self?.dismiss(animated: true, completion: nil)
+    }))
+    alert.addAction(UIAlertAction(
+      title: "Save for later",
+      style: .default,
+      handler: { [weak self] _ in
+        if let partialWorkout = self?.generateStoredWorkout() {
+          IncompleteWorkoutStorage.shared.savePartialWorkout(partialWorkout)
+        }
         self?.dismiss(animated: true, completion: nil)
     }))
     present(alert, animated: true, completion: nil)
@@ -150,6 +189,12 @@ class WorkoutViewController: UITableViewController {
   }
   
   private func finishWorkout() {
+    WorkoutStorage.shared.saveWorkout(generateStoredWorkout())
+    IncompleteWorkoutStorage.shared.deletePartialWorkout()
+    dismiss(animated: true, completion: nil)
+  }
+  
+  private func generateStoredWorkout() -> StoredWorkout {
     let today = Date()
     let storedExercises = sections.map { section in
       return section.cellModels.map { model in
@@ -158,15 +203,14 @@ class WorkoutViewController: UITableViewController {
           setCount: model.exercise.setCount,
           repCount: model.exercise.repCount,
           weight: model.weight,
-          weightSetAt: today)
+          weightSetAt: today,
+          isComplete: model.isComplete)
       }
-    }.flatMap { $0 }
-    let storedWorkout = StoredWorkout(
+      }.flatMap { $0 }
+    return StoredWorkout(
       name: workout.name,
       storedExercises: storedExercises,
       completedAt: today)
-    WorkoutStorage.shared.saveWorkout(storedWorkout)
-    dismiss(animated: true, completion: nil)
   }
 
 }
