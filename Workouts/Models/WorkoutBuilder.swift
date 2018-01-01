@@ -14,7 +14,8 @@ struct WorkoutBuilder {
     WorkoutBuilder.mondayWorkout,
     WorkoutBuilder.tuesdayWorkout,
     WorkoutBuilder.thursdayWorkout,
-    WorkoutBuilder.fridayWorkout
+    WorkoutBuilder.fridayWorkout,
+    WorkoutBuilder.customComboWorkout,
   ]
   
   static var todayWorkout: Workout? {
@@ -33,17 +34,17 @@ struct WorkoutBuilder {
     return Workout(
       name: "Monday - Upper Body",
       exercises: [
-        ConcreteDumbellBenchPress(),
         ConcreteButterfly(),
-        ConcreteStandingMilitaryPress(),
-        ConcreteTricepsPushdown(),
-        ConcreteLyingTricepsPress(),
-        ConcreteSideLateralRaise(),
-        ConcretePreacherCurl(),
-        ConcreteSeatedDumbellCurl(),
         ConcreteWideGripLatPulldown(),
+        ConcreteTricepsPushdown(),
+        ConcreteDumbellBenchPress(),
+        ConcreteSeatedDumbellCurl(),
         ConcreteOneArmDumbellRow(),
-        ConcreteDumbellShrug()
+        ConcreteSideLateralRaise(),
+        ConcreteDumbellShrug(),
+        ConcreteStandingMilitaryPress(),
+        ConcreteLyingTricepsPress(),
+        ConcretePreacherCurl(),
       ])
   }
   
@@ -69,14 +70,14 @@ struct WorkoutBuilder {
         ConcreteChinUp(),
         ConcreteSeatedCableRows(),
         ConcreteUprightCableRow(),
-        ConcreteSideLateralRaise(),
         ConcreteEZBarCurl(),
+        ConcreteTricepsPushdown(),
+        ConcreteDipsChest(),
+        ConcreteCableCrossover(),
+        ConcreteSideLateralRaise(),
         ConcreteHammerCurl(),
         ConcreteInclineDumbellPress(),
-        ConcreteCableCrossover(),
         ConcreteStandingMilitaryPress(),
-        ConcreteDipsChest(),
-        ConcreteTricepsPushdown()
       ])
   }
   
@@ -88,6 +89,24 @@ struct WorkoutBuilder {
         ConcreteFridayStandingCalfRaises(),
         ConcreteSeatedLegCurl(),
         ConcreteStandingLegCurl(),
+        ConcreteFridayLegPress(),
+        ConcreteHackSquat(),
+        ConcreteAbCrunchMachine(),
+        ConcreteCrunches()
+      ])
+  }
+  
+  static var customComboWorkout: Workout {
+    return Workout(
+      name: "Custom - Combo",
+      exercises: [
+        ConcreteHammerCurl(),
+        ConcreteInclineDumbellPress(),
+        ConcreteEZBarCurl(),
+        ConcreteSeatedCableRows(),
+        ConcreteTricepsPushdown(),
+        ConcreteFridayStandingCalfRaises(),
+        ConcreteSeatedLegCurl(),
         ConcreteFridayLegPress(),
         ConcreteHackSquat(),
         ConcreteAbCrunchMachine(),
