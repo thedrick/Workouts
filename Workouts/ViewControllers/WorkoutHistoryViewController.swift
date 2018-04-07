@@ -51,7 +51,7 @@ final class WorkoutHistoryViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let section = sections[section]
     let view = WorkoutSectionHeader()
-    view.title = section.first!.name
+    view.title = section.first?.name
     return view
   }
   

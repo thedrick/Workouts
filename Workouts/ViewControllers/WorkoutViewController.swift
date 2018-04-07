@@ -197,7 +197,10 @@ class WorkoutViewController: UITableViewController {
   private func generateStoredWorkout() -> StoredWorkout {
     let today = Date()
     let storedExercises = sections.map { section in
-      return section.cellModels.map { model in
+      return section.cellModels.map { model -> StoredExercise? in
+        if !model.isComplete {
+          return nil
+        }
         return StoredExercise(
           name: model.exercise.exercise.name,
           setCount: model.exercise.setCount,
@@ -205,7 +208,7 @@ class WorkoutViewController: UITableViewController {
           weight: model.weight,
           weightSetAt: today,
           isComplete: model.isComplete)
-      }
+        }.flatMap { $0 }
       }.flatMap { $0 }
     return StoredWorkout(
       name: workout.name,
