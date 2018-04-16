@@ -41,7 +41,7 @@ final class WorkoutSectionHeader: UIControl {
   private func setUpViews() {
     backgroundColor = Colors.primaryColor
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+    titleLabel.font = Fonts.regularBold
     titleLabel.textColor = .white
     
     chevronLabel.translatesAutoresizingMaskIntoConstraints = false

@@ -51,8 +51,8 @@ final class ExerciseComponentStackView: UIView {
     stackView.axis = .vertical
     stackView.alignment = .center
     
-    titleLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
-    valueField.font = UIFont.preferredFont(forTextStyle: .title1)
+    titleLabel.font = Fonts.micro
+    valueField.font = Fonts.large
     
     valueField.isEnabled = false
     valueField.keyboardType = .numberPad

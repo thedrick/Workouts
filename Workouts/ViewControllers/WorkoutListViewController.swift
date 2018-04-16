@@ -151,25 +151,9 @@ final class WorkoutListViewController: UITableViewController {
   private func handleSelection(_ startItem: WorkoutStartItem) {
     if let workout = startItem.workout {
       showWorkoutViewController(with: workout)
-      return
+    } else {
+      showChooseWorkoutViewController()
     }
-    let actionSheet = UIAlertController(
-      title: "Start a workout",
-      message: nil,
-      preferredStyle: .actionSheet)
-    actionSheet.addAction(UIAlertAction(
-      title: "Cancel",
-      style: .cancel,
-      handler: nil))
-    WorkoutBuilder.workoutWeek.forEach { workout in
-      actionSheet.addAction(UIAlertAction(
-        title: workout.name,
-        style: .default,
-        handler: { [weak self] _ in
-          self?.showWorkoutViewController(with: workout)
-      }))
-    }
-    present(actionSheet, animated: true, completion: nil)
   }
   
   private func handleSelection(_ historyItem: WorkoutHistoryItem) {
@@ -181,6 +165,30 @@ final class WorkoutListViewController: UITableViewController {
     let workoutVC = WorkoutViewController(workout: workout)
     let navVC = UINavigationController(rootViewController: workoutVC)
     present(navVC, animated: true, completion: nil)
+  }
+
+  private func showChooseWorkoutViewController() {
+    let viewController = ChooseWorkoutViewController()
+    viewController.modalPresentationStyle = .custom
+    viewController.transitioningDelegate = self
+    present(viewController, animated: true, completion: nil)
+//    let actionSheet = UIAlertController(
+//      title: "Start a workout",
+//      message: nil,
+//      preferredStyle: .actionSheet)
+//    actionSheet.addAction(UIAlertAction(
+//      title: "Cancel",
+//      style: .cancel,
+//      handler: nil))
+//    WorkoutBuilder.workoutWeek.forEach { workout in
+//      actionSheet.addAction(UIAlertAction(
+//        title: workout.name,
+//        style: .default,
+//        handler: { [weak self] _ in
+//          self?.showWorkoutViewController(with: workout)
+//      }))
+//    }
+//    present(actionSheet, animated: true, completion: nil)
   }
   
   private func loadWorkouts() {
@@ -204,4 +212,16 @@ final class WorkoutListViewController: UITableViewController {
     workoutStartItems = items
   }
   
+}
+
+extension WorkoutListViewController: UIViewControllerTransitioningDelegate {
+  public func presentationController(
+    forPresented presented: UIViewController,
+    presenting: UIViewController?,
+    source: UIViewController) -> UIPresentationController?
+  {
+    return OverlayPresentationController(
+      presentedViewController: presented,
+      presenting: presenting)
+  }
 }

@@ -33,36 +33,17 @@ extension ConcreteExercise {
   }
 }
 
-struct StoredWorkout: Codable {
+struct StoredWorkout: Codable, Equatable {
   var name: String
   var storedExercises: [StoredExercise]
   var completedAt: Date
 }
 
-extension StoredWorkout: Equatable {
-  static func ==(lhs: StoredWorkout, rhs: StoredWorkout) -> Bool {
-    return lhs.name == rhs.name &&
-      lhs.storedExercises == rhs.storedExercises &&
-      lhs.completedAt == rhs.completedAt
-  }
-}
-
-struct StoredExercise: Codable {
+struct StoredExercise: Codable, Equatable {
   var name: String
   var setCount: Int
   var repCount: Int
   var weight: Int
   var weightSetAt: Date
   var isComplete: Bool?
-}
-
-extension StoredExercise: Equatable {
-  static func ==(lhs: StoredExercise, rhs: StoredExercise) -> Bool {
-    return lhs.name == rhs.name &&
-      lhs.setCount == rhs.setCount &&
-      lhs.repCount == rhs.repCount &&
-      lhs.weight == rhs.weight &&
-      lhs.weightSetAt == rhs.weightSetAt &&
-      lhs.isComplete == rhs.isComplete
-  }
 }

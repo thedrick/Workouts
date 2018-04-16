@@ -49,8 +49,8 @@ final class WorkoutHistoryCell: UITableViewCell {
     stackView.axis = .vertical
     stackView.spacing = 8
     
-    supertitleLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
-    titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+    supertitleLabel.font = Fonts.micro
+    titleLabel.font = Fonts.regularBold
   }
   
   private func setupCosntraints() {

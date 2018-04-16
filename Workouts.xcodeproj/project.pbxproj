@@ -76,6 +76,12 @@
 		25DE0CCE1F8F0E0E00046178 /* InclineDumbellPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CCD1F8F0E0E00046178 /* InclineDumbellPress.swift */; };
 		25DE0CD01F8F0E2C00046178 /* CableCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CCF1F8F0E2C00046178 /* CableCrossover.swift */; };
 		25DE0CD21F8F0E4C00046178 /* DipsChest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CD11F8F0E4C00046178 /* DipsChest.swift */; };
+		5043620520843E4300941D45 /* OverlayPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043620420843E4300941D45 /* OverlayPresentationController.swift */; };
+		504362072084405A00941D45 /* ChooseWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504362062084405A00941D45 /* ChooseWorkoutViewController.swift */; };
+		504362092084F3D200941D45 /* ActionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504362082084F3D200941D45 /* ActionHeader.swift */; };
+		5043620B2084F66B00941D45 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043620A2084F66B00941D45 /* Button.swift */; };
+		5043620D2084F75800941D45 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043620C2084F75800941D45 /* Fonts.swift */; };
+		5043620F2084FE8100941D45 /* Margins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043620E2084FE8100941D45 /* Margins.swift */; };
 		B06C9A9D1A33FB79BBDE9ACD /* Pods_WorkoutsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BD22213631573D7B7C7BD4 /* Pods_WorkoutsUITests.framework */; };
 		C8AACD49EADCF99426862F63 /* Pods_Workouts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258666CF8FFFFA1598B901C8 /* Pods_Workouts.framework */; };
 		D432773E4EBD6116F9914CEC /* Pods_WorkoutsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D1475256560E60D43735C9 /* Pods_WorkoutsTests.framework */; };
@@ -178,6 +184,12 @@
 		3479E55CBB4275E15EE55237 /* Pods-Workouts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workouts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workouts/Pods-Workouts.release.xcconfig"; sourceTree = "<group>"; };
 		45D1475256560E60D43735C9 /* Pods_WorkoutsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkoutsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8F41AA53D70E03B9DD3F6A /* Pods-WorkoutsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutsUITests/Pods-WorkoutsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5043620420843E4300941D45 /* OverlayPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPresentationController.swift; sourceTree = "<group>"; };
+		504362062084405A00941D45 /* ChooseWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWorkoutViewController.swift; sourceTree = "<group>"; };
+		504362082084F3D200941D45 /* ActionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHeader.swift; sourceTree = "<group>"; };
+		5043620A2084F66B00941D45 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		5043620C2084F75800941D45 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		5043620E2084FE8100941D45 /* Margins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margins.swift; sourceTree = "<group>"; };
 		78BD22213631573D7B7C7BD4 /* Pods_WorkoutsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkoutsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6BF4804D3C3C733CF5E7F6 /* Pods-Workouts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workouts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workouts/Pods-Workouts.debug.xcconfig"; sourceTree = "<group>"; };
 		B26613A1FAA853214055C601 /* Pods-WorkoutsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutsTests/Pods-WorkoutsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -285,6 +297,7 @@
 		253DA33C1F89A4E60089D0EC /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
+				5043620320843E2100941D45 /* PresentationControllers */,
 				25B2E8A91F9D19E000ED41AA /* Views */,
 				2591E21E1F8AD66500217DFE /* Application */,
 				2591E21D1F8AD65700217DFE /* Resources */,
@@ -361,6 +374,7 @@
 				2526BC901F9D8FB5000F391B /* ExerciseListViewController.swift */,
 				2526BC921F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift */,
 				2503BDC21F9D9D4500D88BFB /* WorkoutHistoryViewController.swift */,
+				504362062084405A00941D45 /* ChooseWorkoutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -389,6 +403,8 @@
 			isa = PBXGroup;
 			children = (
 				2591E21B1F8AD52F00217DFE /* Colors.swift */,
+				5043620C2084F75800941D45 /* Fonts.swift */,
+				5043620E2084FE8100941D45 /* Margins.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -430,6 +446,8 @@
 			isa = PBXGroup;
 			children = (
 				25B2E8AA1F9D19F600ED41AA /* KeyboardToolbar.swift */,
+				504362082084F3D200941D45 /* ActionHeader.swift */,
+				5043620A2084F66B00941D45 /* Button.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -459,6 +477,14 @@
 				25DE0CD11F8F0E4C00046178 /* DipsChest.swift */,
 			);
 			path = Thursday;
+			sourceTree = "<group>";
+		};
+		5043620320843E2100941D45 /* PresentationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5043620420843E4300941D45 /* OverlayPresentationController.swift */,
+			);
+			path = PresentationControllers;
 			sourceTree = "<group>";
 		};
 		E750AC099BD6F0A41456F106 /* Frameworks */ = {
@@ -778,6 +804,7 @@
 				253DA3801F89B1FA0089D0EC /* LyingTricpesPress.swift in Sources */,
 				25DE0CCA1F8F0DDE00046178 /* EZBarCurl.swift in Sources */,
 				2591E2141F89C45300217DFE /* ExerciseRow.swift in Sources */,
+				5043620D2084F75800941D45 /* Fonts.swift in Sources */,
 				253DA3881F89B28B0089D0EC /* WideGripLatPulldown.swift in Sources */,
 				253DA3401F89A4E70089D0EC /* WorkoutViewController.swift in Sources */,
 				2591E22D1F8AD75200217DFE /* FontAwesomeBarButtonItem.swift in Sources */,
@@ -805,15 +832,18 @@
 				25D998F21F906569008C5EA5 /* FridayStandingCalfRaises.swift in Sources */,
 				2503BDC51F9DA40400D88BFB /* WorkoutHistoryCell.swift in Sources */,
 				25DE0CCC1F8F0DF900046178 /* HammerCurl.swift in Sources */,
+				504362072084405A00941D45 /* ChooseWorkoutViewController.swift in Sources */,
 				2502B3921F8C75690089DDF8 /* LyingLegCurls.swift in Sources */,
 				253DA38A1F89B2B20089D0EC /* OneArmDumbellRow.swift in Sources */,
 				25D998F41F9065F4008C5EA5 /* FridayLegPress.swift in Sources */,
 				253DA37A1F89B1290089D0EC /* Butterfly.swift in Sources */,
 				25D998F01F906305008C5EA5 /* HackSquat.swift in Sources */,
+				5043620520843E4300941D45 /* OverlayPresentationController.swift in Sources */,
 				25DE0CD21F8F0E4C00046178 /* DipsChest.swift in Sources */,
 				2502B3941F8C75880089DDF8 /* StandingCalfRaises.swift in Sources */,
 				253DA3721F89A9C30089D0EC /* WorkoutBuilder.swift in Sources */,
 				253DA33E1F89A4E70089D0EC /* AppDelegate.swift in Sources */,
+				5043620F2084FE8100941D45 /* Margins.swift in Sources */,
 				2591E2311F8AD75200217DFE /* FontAwesomeStateRequirement.swift in Sources */,
 				2591E22C1F8AD74F00217DFE /* Enum.swift in Sources */,
 				2591E22F1F8AD75200217DFE /* FontAwesomeImageView.swift in Sources */,
@@ -825,6 +855,7 @@
 				2526BC931F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift in Sources */,
 				25B2E8AD1F9D22A300ED41AA /* WorkoutListViewController.swift in Sources */,
 				25DE0CC41F8F0BFA00046178 /* ChinUp.swift in Sources */,
+				504362092084F3D200941D45 /* ActionHeader.swift in Sources */,
 				2591E22E1F8AD75200217DFE /* FontAwesomeImageRepresentable.swift in Sources */,
 				25B2E8AB1F9D19F600ED41AA /* KeyboardToolbar.swift in Sources */,
 				2526BC8F1F9D2D5E000F391B /* WorkoutStorage.swift in Sources */,
@@ -832,6 +863,7 @@
 				2502B38C1F8C74670089DDF8 /* LegPress.swift in Sources */,
 				2502B3901F8C754E0089DDF8 /* SeatedLegCurl.swift in Sources */,
 				253DA3911F89BB390089D0EC /* SettingsViewController.swift in Sources */,
+				5043620B2084F66B00941D45 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
