@@ -20,8 +20,19 @@ final class ChooseWorkoutViewController: UIViewController {
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
+    let tableViewContentHeight = tableView.contentSize.height
+    var tableViewMaxHeight = view.bounds.height
+    tableViewMaxHeight -= view.layoutMargins.top
+    tableViewMaxHeight -= view.layoutMargins.bottom
+    tableViewMaxHeight -= headerView.bounds.height
+    tableViewHeightConstraint.constant = min(tableViewContentHeight, tableViewMaxHeight)
+    tableView.isScrollEnabled = (tableViewContentHeight >= tableViewMaxHeight)
     containerView.layer.shadowPath = UIBezierPath(rect: containerView.bounds).cgPath
   }
+  
+  // MARK: Public
+  
+  public var didSelectWorkoutHandler: (Workout) -> Void = { _ in }
 
   // MARK: Private
 
@@ -58,24 +69,56 @@ final class ChooseWorkoutViewController: UIViewController {
       for: .touchUpInside)
     return button
   }()
+  private lazy var tableView: TableView = {
+    let tableView = TableView()
+    tableView.showsVerticalScrollIndicator = false
+    tableView.showsHorizontalScrollIndicator = false
+    return tableView
+  }()
+  private lazy var tableViewHeightConstraint: NSLayoutConstraint = {
+    let constraint = tableView.heightAnchor.constraint(equalToConstant: 0)
+    constraint.isActive = true
+    return constraint
+  }()
 
   private func setUpViews() {
     view.addSubview(backgroundButton)
     view.addSubview(containerView)
     containerView.addSubview(stackView)
     stackView.addArrangedSubview(headerView)
+    stackView.addArrangedSubview(tableView)
+    tableView.setSections(tableViewSections())
   }
 
   private func setUpConstraints() {
     backgroundButton.constrainToSuperview()
     view.layoutMargins = Margins.overlayContainer
-    containerView.constrain(to: view, anchors: [.leadingMargin, .trailingMargin, .topMargin])
+    containerView.constrain(
+      to: view,
+      anchors: [.leadingMargin, .trailingMargin, .topMargin])
     stackView.constrainToSuperview()
   }
 
   @objc
   private func handleBackgroundTapped(_ button: UIButton) {
     self.dismiss(animated: true, completion: nil)
+  }
+  
+  private func tableViewSections() -> [TableViewSection] {
+    let workouts = WorkoutBuilder.workoutWeek
+    let rows: [TableViewRow] = workouts.map { workout in
+      return TableViewRow(
+        viewBuilder: { () -> UIView in
+          let row = BasicRow()
+          row.titleText = workout.name
+          return row
+      },
+        selectionHandler: { [weak self] view in
+          self?.didSelectWorkoutHandler(workout)
+      })
+    }
+    
+    return [TableViewSection(rows: rows)]
   }
 
 }

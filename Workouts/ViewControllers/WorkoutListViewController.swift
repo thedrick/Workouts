@@ -171,24 +171,12 @@ final class WorkoutListViewController: UITableViewController {
     let viewController = ChooseWorkoutViewController()
     viewController.modalPresentationStyle = .custom
     viewController.transitioningDelegate = self
+    viewController.didSelectWorkoutHandler = { [weak self] workout in
+      self?.dismiss(animated: true, completion: {
+        self?.showWorkoutViewController(with: workout)
+      })
+    }
     present(viewController, animated: true, completion: nil)
-//    let actionSheet = UIAlertController(
-//      title: "Start a workout",
-//      message: nil,
-//      preferredStyle: .actionSheet)
-//    actionSheet.addAction(UIAlertAction(
-//      title: "Cancel",
-//      style: .cancel,
-//      handler: nil))
-//    WorkoutBuilder.workoutWeek.forEach { workout in
-//      actionSheet.addAction(UIAlertAction(
-//        title: workout.name,
-//        style: .default,
-//        handler: { [weak self] _ in
-//          self?.showWorkoutViewController(with: workout)
-//      }))
-//    }
-//    present(actionSheet, animated: true, completion: nil)
   }
   
   private func loadWorkouts() {

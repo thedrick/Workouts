@@ -10,6 +10,7 @@ import UIKit
 
 enum Sizes {
 
+  static let micro: CGFloat = 4
   static let small: CGFloat = 12
   static let regular: CGFloat = 24
   static let large: CGFloat = 48

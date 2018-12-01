@@ -76,6 +76,12 @@
 		25DE0CCE1F8F0E0E00046178 /* InclineDumbellPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CCD1F8F0E0E00046178 /* InclineDumbellPress.swift */; };
 		25DE0CD01F8F0E2C00046178 /* CableCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CCF1F8F0E2C00046178 /* CableCrossover.swift */; };
 		25DE0CD21F8F0E4C00046178 /* DipsChest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE0CD11F8F0E4C00046178 /* DipsChest.swift */; };
+		25EF9AAE208714700048A674 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF9AAD208714700048A674 /* TableView.swift */; };
+		25EF9AB020871A730048A674 /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF9AAF20871A730048A674 /* TableViewSection.swift */; };
+		25EF9AB220871A7B0048A674 /* TableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF9AB120871A7B0048A674 /* TableViewRow.swift */; };
+		25EF9AB4208722550048A674 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF9AB3208722550048A674 /* TableViewCell.swift */; };
+		25EF9AB6208724F90048A674 /* BasicRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF9AB5208724F90048A674 /* BasicRow.swift */; };
+		25EF9AB8208727330048A674 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF9AB7208727330048A674 /* Label.swift */; };
 		5043620520843E4300941D45 /* OverlayPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043620420843E4300941D45 /* OverlayPresentationController.swift */; };
 		504362072084405A00941D45 /* ChooseWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504362062084405A00941D45 /* ChooseWorkoutViewController.swift */; };
 		504362092084F3D200941D45 /* ActionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504362082084F3D200941D45 /* ActionHeader.swift */; };
@@ -181,6 +187,12 @@
 		25DE0CCD1F8F0E0E00046178 /* InclineDumbellPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InclineDumbellPress.swift; sourceTree = "<group>"; };
 		25DE0CCF1F8F0E2C00046178 /* CableCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CableCrossover.swift; sourceTree = "<group>"; };
 		25DE0CD11F8F0E4C00046178 /* DipsChest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DipsChest.swift; sourceTree = "<group>"; };
+		25EF9AAD208714700048A674 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		25EF9AAF20871A730048A674 /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
+		25EF9AB120871A7B0048A674 /* TableViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRow.swift; sourceTree = "<group>"; };
+		25EF9AB3208722550048A674 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		25EF9AB5208724F90048A674 /* BasicRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRow.swift; sourceTree = "<group>"; };
+		25EF9AB7208727330048A674 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		3479E55CBB4275E15EE55237 /* Pods-Workouts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workouts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workouts/Pods-Workouts.release.xcconfig"; sourceTree = "<group>"; };
 		45D1475256560E60D43735C9 /* Pods_WorkoutsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkoutsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8F41AA53D70E03B9DD3F6A /* Pods-WorkoutsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutsUITests/Pods-WorkoutsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -297,6 +309,7 @@
 		253DA33C1F89A4E60089D0EC /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
+				25EF9AAC2087145B0048A674 /* TableView */,
 				5043620320843E2100941D45 /* PresentationControllers */,
 				25B2E8A91F9D19E000ED41AA /* Views */,
 				2591E21E1F8AD66500217DFE /* Application */,
@@ -448,6 +461,8 @@
 				25B2E8AA1F9D19F600ED41AA /* KeyboardToolbar.swift */,
 				504362082084F3D200941D45 /* ActionHeader.swift */,
 				5043620A2084F66B00941D45 /* Button.swift */,
+				25EF9AB5208724F90048A674 /* BasicRow.swift */,
+				25EF9AB7208727330048A674 /* Label.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -477,6 +492,17 @@
 				25DE0CD11F8F0E4C00046178 /* DipsChest.swift */,
 			);
 			path = Thursday;
+			sourceTree = "<group>";
+		};
+		25EF9AAC2087145B0048A674 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				25EF9AAD208714700048A674 /* TableView.swift */,
+				25EF9AAF20871A730048A674 /* TableViewSection.swift */,
+				25EF9AB120871A7B0048A674 /* TableViewRow.swift */,
+				25EF9AB3208722550048A674 /* TableViewCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		5043620320843E2100941D45 /* PresentationControllers */ = {
@@ -823,6 +849,7 @@
 				253861191FA3045F00B81FDD /* IncompleteWorkoutStorage.swift in Sources */,
 				2502B39A1F8C75D80089DDF8 /* Crunches.swift in Sources */,
 				25DE0CD01F8F0E2C00046178 /* CableCrossover.swift in Sources */,
+				25EF9AB4208722550048A674 /* TableViewCell.swift in Sources */,
 				25D998EE1F9062D8008C5EA5 /* StandingLegCurl.swift in Sources */,
 				25469A301F8F425F0084E6BE /* ImageCell.swift in Sources */,
 				253DA3701F89A84C0089D0EC /* DumbellBenchPress.swift in Sources */,
@@ -832,6 +859,8 @@
 				25D998F21F906569008C5EA5 /* FridayStandingCalfRaises.swift in Sources */,
 				2503BDC51F9DA40400D88BFB /* WorkoutHistoryCell.swift in Sources */,
 				25DE0CCC1F8F0DF900046178 /* HammerCurl.swift in Sources */,
+				25EF9AB220871A7B0048A674 /* TableViewRow.swift in Sources */,
+				25EF9AB6208724F90048A674 /* BasicRow.swift in Sources */,
 				504362072084405A00941D45 /* ChooseWorkoutViewController.swift in Sources */,
 				2502B3921F8C75690089DDF8 /* LyingLegCurls.swift in Sources */,
 				253DA38A1F89B2B20089D0EC /* OneArmDumbellRow.swift in Sources */,
@@ -839,6 +868,7 @@
 				253DA37A1F89B1290089D0EC /* Butterfly.swift in Sources */,
 				25D998F01F906305008C5EA5 /* HackSquat.swift in Sources */,
 				5043620520843E4300941D45 /* OverlayPresentationController.swift in Sources */,
+				25EF9AAE208714700048A674 /* TableView.swift in Sources */,
 				25DE0CD21F8F0E4C00046178 /* DipsChest.swift in Sources */,
 				2502B3941F8C75880089DDF8 /* StandingCalfRaises.swift in Sources */,
 				253DA3721F89A9C30089D0EC /* WorkoutBuilder.swift in Sources */,
@@ -850,11 +880,13 @@
 				2591E2321F8AD75200217DFE /* FontAwesomeTabBarItem.swift in Sources */,
 				253DA37C1F89B1AC0089D0EC /* StandingMilitaryPress.swift in Sources */,
 				253DA36E1F89A6190089D0EC /* Workout.swift in Sources */,
+				25EF9AB020871A730048A674 /* TableViewSection.swift in Sources */,
 				2591E2121F89C07500217DFE /* WeightStore.swift in Sources */,
 				2502B38E1F8C75190089DDF8 /* LegExtensions.swift in Sources */,
 				2526BC931F9D90CE000F391B /* ExerciseWeightHistogramViewController.swift in Sources */,
 				25B2E8AD1F9D22A300ED41AA /* WorkoutListViewController.swift in Sources */,
 				25DE0CC41F8F0BFA00046178 /* ChinUp.swift in Sources */,
+				25EF9AB8208727330048A674 /* Label.swift in Sources */,
 				504362092084F3D200941D45 /* ActionHeader.swift in Sources */,
 				2591E22E1F8AD75200217DFE /* FontAwesomeImageRepresentable.swift in Sources */,
 				25B2E8AB1F9D19F600ED41AA /* KeyboardToolbar.swift in Sources */,
